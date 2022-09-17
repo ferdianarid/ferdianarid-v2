@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Gilroy", sans-serif;
+}
+
+@font-face {
+    font-family: "gilroy-bold";
+    src: local("GilroyBold"), url(../../public/fonts/Gilroy-Bold.woff) format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "gilroy-semibold";
+    src: local("GilroySemibold"), url(../../public/fonts/Gilroy-Semibold.woff) format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "gilroy-medium";
+    src: local("GilroyMedium"), url(../../public/fonts/Gilroy-Medium.woff) format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "gilroy-normal";
+    src: local("GilroyNormal"), url(../../public/fonts/Gilroy-Regular.woff) format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "gilroy-light";
+    src: local("GilroyLight"), url(../../public/fonts/Gilroy-Light.woff) format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "gilroy-extralight";
+    src: local("GilroyExtraLight"), url(../../public/fonts/Gilroy-UltraLight.woff) format("woff");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "gilroy-thin";
+    src: local("GilroyThin"), url(../../public/fonts/Gilroy-Thin.woff) format("woff");
+    font-weight: 100;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
