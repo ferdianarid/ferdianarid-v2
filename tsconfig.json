@@ -1,31 +1,34 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "apps",
+    "baseUrl": "./",
     "paths": {
         "@pages/*": [
           "pages/*"
         ],
         "@animation/*": [
-          "animation/*"
+          "apps/animation/*"
         ],
         "@components/*": [
-          "components/*"
+          "apps/components/*"
         ],
         "@modules/*": [
-          "modules/*"
+          "apps/modules/*"
         ],
         "@specs/*": [
-          "specs/*"
+          "apps/specs/*"
         ],
         "@styles/*": [
-          "styles/*"
+          "apps/styles/*"
         ],
         "@layouts/*": [
-          "layouts/*"
+          "apps/layouts/*"
         ],
         "@hooks/*": [
-          "hooks/*"
+          "apps/hooks/*"
+        ],
+        "@interfaces/*": [
+          "apps/interfaces/*"
         ]
     },
     "lib": ["dom", "dom.iterable", "esnext"],

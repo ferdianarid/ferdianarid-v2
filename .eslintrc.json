@@ -3,6 +3,21 @@
   "rules": {
     "no-unused-vars": "error",
     "semi": [2, "never"],
-    "quotes": ["error","double", "avoid-escape"]
+    "quotes": ["error","double", "avoid-escape"],
+    "prefer-const": "error",
+    "arrow-parens": "error",
+    "callback-return": "error",
+    "comma-spacing": [
+      "error", {"before": false, "after": true}
+    ],
+    "array-bracket-spacing": [
+      "error", "always", 
+      {"singleValue": true},
+      {"objectsInArrays": false},
+      {"arraysInArrays": false}
+    ],
+    "space-in-parens": ["error", "never"],
+    "object-curly-spacing": ["error", "never"],
+    "react/no-unescaped-entities": "error"
   }
 }

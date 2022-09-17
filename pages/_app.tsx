@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react"
 import NProgress from "nprogress"
 import { useRouter } from "next/router"
 import "@styles/globals.css"
+import React from "react"
 // import Script from "next/script"
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -3,48 +3,50 @@ import Link from "next/link"
 import { Transition } from "@headlessui/react"
 import { motion } from "framer-motion"
 import { FaArrowRight } from "react-icons/fa"
-import PostsCategory from "./Popover/PostsCategory"
+import PostsCategory from "./organism/Popover/PostsCategory"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <nav className="w-full bg-primary-main">
-      {/* eslint-disable-next-line quotes */}
-      <div className={`py-[18px] tablet:block desktop:block relative z-40 tablet:z-auto desktop:z-auto px-6 tablet:px-10 tablet:bg-primary-main desktop:bg-primary-main desktop:px-[120px] max-w-[1440px] mx-auto ${isOpen ? "bg-neutral-10" : ""}`}>
-        {/* eslint-disable-next-line quotes */}
+    <nav className="bg-primary-pressed">
+      <div className="w-full max-w-[1440px] mx-auto px-3 md:px-24">
+      <div className={`py-[18px] tablet:block desktop:block relative z-40 tablet:z-auto desktop:z-auto tablet:bg-primary-main desktop:bg-primary-main desktop:px-[120px] max-w-[1440px] mx-auto ${isOpen ? "bg-neutral-10" : ""}`}>
         <div className={`w-full flex items-center tablet:border-none desktop:border-none justify-between ${isOpen ? "border-b border-neutral-30" : ""}`}>
-          <Link href="/">
+          <Link href="/portfolio">
             <motion.div className="hover:cursor-pointer" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
-              <h1 className="font-bold text-lg text-white">Logo</h1>
+              <h1 className="font-bold text-2xl text-neutral-10 py-1 px-3 rounded-lg bg-primary-hover bg-opacity-50">Portfolio</h1>
             </motion.div>
           </Link>
-          <div className="ml-auto flex items-center space-between">
+          <div className="mx-auto flex items-center space-between">
             <div className="hidden md:block">
               <div className="ml-16 flex items-center space-x-10 relative z-20">
-                <Link href="/why">
-                  <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-white font-gilroy-medium text-text-m hover:cursor-pointer">
-                  Navigation
+                <Link href="/projects">
+                  <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                  Projects
                   </motion.a>
                 </Link>
                 <PostsCategory textColors="text-neutral-10" />
-                <Link href="/jobs">
-                  <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-white font-gilroy-medium text-text-m hover:cursor-pointer">
-                  Navigation
+                <Link href="/experience">
+                  <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                  Experience
                   </motion.a>
                 </Link>
-                <Link href="/">
-                  <motion.button initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 1 }} className="text-primary-main font-gilroy-bold bg-secondary-main rounded-lg py-[15.5px] px-5 text-text-s hover:cursor-pointer flex items-center">
-                  Navigation <span className="ml-2"><FaArrowRight size={16} /></span>
-                  </motion.button>
+                <Link href="/services">
+                  <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                  Services
+                  </motion.a>
                 </Link>
               </div>
             </div>
           </div>
+          <Link href="/">
+          <button className="py-2 px-6 border  border-primary-main transition-colors bg-neutral-10 text-primary-main font-gilroy-medium text-heading-7">Email Me</button>
+            </Link>
           <div className="flex md:w-fit md:space-x-4 justify-between">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="text-headline-7 inline-flex md:hidden items-center justify-center p-2 rounded-md text-white focus:outline-none "
+              className="text-headline-7 inline-flex md:hidden items-center justify-center p-2 rounded-md text-neutral-10 focus:outline-none "
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -80,13 +82,13 @@ const Navbar = () => {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="py-2 flex flex-col mt-4 mb-7">
                 <Link href="/why">
-                  <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className="hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-text-m hover:cursor-pointer">
+                  <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className="hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-sm hover:cursor-pointer">
                   Navigation
                   </motion.a>
                 </Link>
-                <PostsCategory textColors=" hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-text-m hover:cursor-pointer" />
+                <PostsCategory textColors=" hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-sm hover:cursor-pointer" />
                 <Link href="/jobs">
-                  <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.7 }} className="hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-text-m hover:cursor-pointer">
+                  <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.7 }} className="hover:bg-secondary-hover text-primary-main py-[22.5px] px-4 font-gilroy-medium text-sm hover:cursor-pointer">
                   Navigation
                   </motion.a>
                 </Link>
@@ -101,6 +103,7 @@ const Navbar = () => {
             </div>
           )}
         </Transition>
+      </div>
       </div>
     </nav>
   )

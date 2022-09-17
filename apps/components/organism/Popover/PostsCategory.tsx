@@ -18,7 +18,7 @@ const PostsCategory = ({ textColors }: any) => {
                             className="flex items-center focus:outline-none text-headline-7 text-primary-border font-normal"
                         >
                             {/* eslint-disable-next-line quotes */}
-                            <motion.a href="/category" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 font-gilroy-medium text-text-m hover:cursor-pointer`}>
+                            <motion.a href="/category" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 font-gilroy-medium text-sm hover:cursor-pointer`}>
                                 Category
                                 {open ? <FaChevronUp /> : <FaChevronDown />}
                             </motion.a>
@@ -38,7 +38,7 @@ const PostsCategory = ({ textColors }: any) => {
                                         {CategoryList.map((item) => (
                                             <Link key={item.id} href={item.pathUrl}>
                                                 <a
-                                                    className="text-primary-main font-gilroy-semibold text-text-m hover:cursor-pointer  rounded-md py-2 px-3 transition duration-150 ease-in-out hover:bg-secondary-surface focus:outline-none"
+                                                    className="text-primary-main font-gilroy-medium text-sm hover:cursor-pointer  rounded-md py-2 px-3 transition duration-150 ease-in-out hover:bg-secondary-surface focus:outline-none"
                                                 >
                                                     {item.title}
                                                 </a>
