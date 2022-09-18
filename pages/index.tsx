@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
             {/* <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-semantic-warning-main py-2 px-4 rounded-lg bg-opacity-30">Engineering</p> */}
-            <HeadingText isLight className="my-7">Hi! I'm <span className="py-1 px-5 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
+            <HeadingText isLight className="my-7">Hi! I'm <span className="py-1 px-3 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
             <ParagraphText isLight>Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
             <button className="py-3 px-8 md:py-4 md:px-10 bg-semantic-warning-main  transition-colors text-neutral-10 rounded-full font-gilroy-bold text-heading-6">Lets chat me</button>
