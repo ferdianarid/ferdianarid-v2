@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
           </div>
           <Link href="/">
-          <button className="py-2 px-6 border  border-primary-main transition-colors bg-neutral-10 text-primary-main font-gilroy-medium text-heading-7">Email Me</button>
+          <button className="py-3 px-6  transition-colors bg-semantic-warning-main text-neutral-10 font-gilroy-bold text-heading-6 rounded-full">Email Me</button>
             </Link>
           <div className="flex md:w-fit md:space-x-4 justify-between">
             <button

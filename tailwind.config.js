@@ -28,10 +28,10 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    main: "#001D6E",
+                    main: "#131221",
                     surface: "#EFF0F6",
-                    hover: "#334A8B",
-                    pressed: "#001758",
+                    hover: "#2d2b45",
+                    pressed: "#131221",
                     focus: "#CCD2E2",
                     border: "#808EB7",
                     dark: "#6638FA"
@@ -62,7 +62,7 @@ module.exports = {
                         focus: "#CCEBFF"
                     },
                     warning: {
-                        main: "#FFDA54",
+                        main: "#ffa70f",
                         surface: "#FFFBEE",
                         border: "#FFF0BB",
                         hover: "#FFE998",
