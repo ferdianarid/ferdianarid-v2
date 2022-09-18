@@ -15,26 +15,23 @@ const Home: NextPage = () => {
         <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
             {/* <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-semantic-warning-main py-2 px-4 rounded-lg bg-opacity-30">Engineering</p> */}
-            <HeadingText isLight className="my-7">Hi! I'm <span className="py-1 px-5 rounded-lg bg-primary-hover bg-opacity-50">Ferdian</span></HeadingText>
+            <HeadingText isLight className="my-7">Hi! I'm <span className="py-1 px-5 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
             <ParagraphText isLight>Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
-            <button className="py-3 px-8 md:py-4 md:px-10 bg-semantic-warning-main  transition-colors text-neutral-10 rounded-full font-bold text-heading-5">Lets chat me</button>
-            {/* <button className="py-3 px-10 transition-colors  text-neutral-10  font-bold text-heading-5">Projects</button> */}
+            <button className="py-3 px-8 md:py-4 md:px-10 bg-semantic-warning-main  transition-colors text-neutral-10 rounded-full font-gilroy-bold text-heading-6">Lets chat me</button>
             </div>
           </div>
           <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
             <div className="w-full border-8 border-neutral-10 h-full bg-semantic-warning-main relative rounded-3xl flex items-center justify-center pt-20 md:pt-5">
               <Image src="/images/ferdian.png" className="z-10" width={340} height={420} alt="ferdian" />
               <div className="absolute -top-16 right-0 h-40 w-64 ">
-                {/* <Image src="/images/box.svg" width={250} height={200} alt="box" /> */}
               </div>
               <div className="absolute left-2 rounded-xl bottom-12 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5">
 <h1 className="font-gilroy-bold text-xl text-primary-main">Ferdian Ahmad R</h1>
 <h1 className="font-gilroy-normal text-sm text-primary-main">Freelance Frontend</h1>
               </div>
               <div className="absolute right-4 -top-12 md:-right-16 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5">
-<h1 className="font-gilroy-bold text-xl text-primary-main">Ferdian Ahmad R</h1>
-<h1 className="font-gilroy-normal text-sm text-primary-main">Freelance Frontend</h1>
+              <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />
               </div>
               <div className="absolute left-5 rounded-xl -top-14 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
                 <Image src="/images/react-logo.png" width={80} height={70} alt="react" />
@@ -85,7 +82,7 @@ const Home: NextPage = () => {
 <Image src="/images/framer-logo.png" width={170} height={150} alt="react" />
             </div>
             <div className="">
-<Image src="/images/typescript.png" width={170} height={150} alt="react" />
+              <Image src="/images/typescript.png" width={170} height={150} alt="react" />
             </div>
           </div>
         </div>

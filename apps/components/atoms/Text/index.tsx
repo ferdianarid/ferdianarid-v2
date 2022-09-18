@@ -7,7 +7,7 @@ interface ITextProps {
 }
 
 export const HeadingText: React.FC<ITextProps> = ({children, isLight, className}) => {
-    return <h1 className={`${isLight ? "text-neutral-10" : "text-primary-pressed"} ${className} font-extrabold text-5xl md:text-7xl`}>{children}</h1>
+    return <h1 className={`${isLight ? "text-neutral-10" : "text-primary-pressed"} ${className} font-gilroy-bold text-5xl md:text-7xl`}>{children}</h1>
 }
 
 export const ParagraphText: React.FC<ITextProps> = ({children, isLight, className}) => {
