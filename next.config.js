@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const createMDX = require("@next/mdx")
+
 const nextConfig = {
     reactStrictMode: true,
     env: {
@@ -11,6 +13,18 @@ const nextConfig = {
             destination: "/posts?results-all"
         }, ]
     },
+    reactStrictMode: true,
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 }
 
-module.exports = nextConfig
+const withMDX = createMDX({
+    extension: /\.mdx?$/,
+    options: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+        // If you use `MDXProvider`, uncomment the following line.
+        // providerImportSource: "@mdx-js/react",
+    },
+})
+
+module.exports = withMDX(nextConfig)

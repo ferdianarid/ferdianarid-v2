@@ -1,0 +1,21 @@
+---
+title: How We Build Micro Frontends
+author: Ferdian Ahmad R
+role: Freelance Frontend
+imageUrl: '/images/posts/micro.png'
+category: Frontend Development
+description: Building micro-frontends to speed up and scale our web development process
+createdAt: 'September 22, 2022'
+tags: ['frontend', 'javascript', 'microfrontend', 'webdevelopment']
+---
+
+<ContentText>Building micro-frontends to speed up and scale our web development process.</ContentText>
+<ContentText>At Bit, we build tools for over 100,000 developers working with components. Our tools help developers build, reuse, and collaborate on independent components to speed up development and improve application quality.</ContentText>
+<ContentText>Since day one weve been dogfooding our own tools, while letting components drive our architecture and development process. A great advantage of this is the ability to enjoy the benefits of Micro Front-Ends.</ContentText>
+<ContentText>By splitting the front-end monolith into smaller codebases, front-end teams can enjoy similar benefits to those of microservices: maintainable codebases, autonomous teams, independent releases, and incremental upgrades.</ContentText>
+<ContentText>Micro frontends are usually thought of as a composition of independent frontends that happens at runtime, either on the server or on the client-side.</ContentText>
+<ContentText>While runtime integrations have their benefits (smaller payloads for example) but theyre not, by any means, the only way to achieve “a composition of independently deliverable frontend applications”</ContentText>
+<ContentText>This new way of building and collaborating on frontend apps, is, in our view, the core element of micro frontends. With the right component model and the right tools, any team can adopt a modular approach to building web applications, and enjoy these benefits. For us, composing frontend apps in build-time brings the best of both worlds — the safety and robustness of “traditional monoliths” and the simplicity and scalability of micro frontends. For that, we use Bit, an open-source library that helps in making each component completely independent, and our cloud platform that lets teams efficiently collaborate and integrate together.</ContentText>
+<ContentText>In this article, I’ll show how we, at Bit, are building micro-frontends. I’ll explain how it helped us achieve goals such as decoupled codebases, fully-autonomous teams, independent incremental upgrades, and near 100% modular code reuse. I hope you’ll find this shared knowledge useful.</ContentText>
+<ContentText>Once the mouse enters a component, a highlight turns on, indicating the component’s name, independent version, and scope in which it is published and exposed. As you scroll, you’ll notice that the entire page is made of components that are independently built, versioned, and shared by different teams, in different codebases, using different build processes, and are all integrated together into one cohesive-feeling product. What you see there is a real demonstration of how our team is using modern component-driven technologies like React and Bit to build micro front-ends. On this page, you will see two sets of components, developed by two teams. One is the “base-ui” set of components, owned by our front-end infrastructure team. The second set is “evangelist’”, owned by our marketing team. Components from both sets are integrated together to quickly compose the homepage you look at, as well as other pages like the Enterprise Page or Support Page, and even to compose more applications.</ContentText>
+<ContentText>One scope of components is called “base-ui”. This is the most basic component design system of Bit.dev, that contains basic elements like “paragraph” for example. It is owned by the frontend infrastructure team and developed in its own decoupled codebase. All these components are published and shared on Bit.dev. There, they can be easily discovered and integrated into new projects by any other team that needs them. And, the team building base-ui can keep incrementally sending updates to specific components.</ContentText>

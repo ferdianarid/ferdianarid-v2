@@ -1,11 +1,13 @@
-import Navbar from "@components/Navbar"
-import {Fragment} from "react"
+import { Fragment } from "react"
+import Footer from "@components/organism/Footer"
+import Navbar from "@components/organism/Navbar"
 
-const PagesLayout = ({children}: any) => {
+const PagesLayout = ({ children }: any) => {
   return (
     <Fragment>
-        <Navbar />
-        {children}
+      <Navbar />
+      {children}
+      <Footer />
     </Fragment>
   )
 }
