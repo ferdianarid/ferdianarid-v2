@@ -6,6 +6,7 @@
     font-family: "Gilroy", sans-serif;
 }
 
+@import 'components.css';
 @font-face {
     font-family: "gilroy-bold";
     src: local("GilroyBold"), url(../../public/fonts/Gilroy-Bold.woff) format("woff");

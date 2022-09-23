@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
   return (
     <nav className="bg-primary-pressed">
-      <div className="w-full max-w-[1440px] mx-auto px-3 py-[18px] md:px-24">
+      <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
         <div className="">
           <div className="w-full flex items-center justify-between">
             <Link href="/portfolio">

@@ -4,8 +4,7 @@ import PagesLayout from '@layouts/PagesLayout'
 import fs from 'fs'
 import * as path from 'path'
 import matter from 'gray-matter'
-import { ContentHeading, ContentText } from '@components/atoms/Text'
-import Link from 'next/link'
+import PostCard from '@components/organism/Cards/PostCard'
 
 const Posts = ({ posts }: any) => {
     console.log(posts)
@@ -21,13 +20,11 @@ const Posts = ({ posts }: any) => {
             </Head>
             <PagesLayout>
                 <div className="w-full bg-primary-pressed py-10 px-6 md:px-24">
-                    {posts.map((post: any, idx: number) => (
-                        <Link href={`/posts/${post.postId}`}>
-                            <div className="bg-semantic-warning-main h-[200px]">
-                                <ContentHeading isLight className='my-3' key={idx}>{post.frontMatter.title}</ContentHeading>
-                            </div>
-                        </Link>
-                    ))}
+                    <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+                        {posts.map((post: any, idx: number) => (
+                            <PostCard key={idx} imagePath={post.frontMatter.imageUrl} postId={post.postId} title={post.frontMatter.title} description={post.frontMatter.description} category={post.frontMatter.category} />
+                        ))}
+                    </div>
                 </div>
             </PagesLayout>
         </Fragment >
