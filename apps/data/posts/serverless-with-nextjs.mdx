@@ -1,0 +1,26 @@
+---
+title: Serverless with Next.js
+author: Ferdian Ahmad R
+role: Freelance Frontend
+imageUrl: '/images/posts/serverless.png'
+category: Frontend Development
+description: Next.js is react framework that comes with a lot of inbuilt functionality like SSR
+createdAt: 'September 22, 2022'
+tags: ['serverless', 'javascript', 'frontend', 'server-side']
+---
+
+<ContentText>Next.js is a solid react framework that comes with a lot of inbuilt functionality like Server-Side rendering, SEO optimization, dynamic routing etc. I have already covered an article on building Solid Next.js architecture.
+In addition, for creating our serverless function I am using the same repository which I have already created while explaining the Next.js architecture.</ContentText>
+
+<PointHeading isLight>Serverless Function</PointHeading>
+<ContentText>By the virtue of their name, they are the JavaScript, function that helps to make an HTTP request and send the response. Serverless function comes with benefits to make user authentication, form submission etc.</ContentText>
+
+<PointHeading isLight>Execution</PointHeading>
+<ContentText>Every serverless function is just a JavaScript function that has 2 arguments, a request written as “req” and a response written as “res”. If you are familiar with the Express framework of Node JS then you can resemble it like a simple API defined in **Controllers**. The function which takes the req and returns the response on the server but without hosting it on any server is basically a serverless function.</ContentText>
+
+<PointHeading isLight>Writing our basic Serverless Function</PointHeading>
+<ContentText>I am using a sample GET API from JSON placeholder and will try to fetch this data using our serverless function. I will add fetch a single user data from this sample API and that single user if the filter on the basis of one “key”, that key I will get from query parameters from our request object of our Serverless Function.</ContentText>
+
+<PointHeading isLight>Conclusion</PointHeading>
+<ContentText>Serverless Function is quite useful in case of using endpoints without deploying them on an independent server. Contact Us forms, user authentication all can be done using these functions. I have used a serverless function to access Twitter npm packages for the frontend to use Twitter API.
+Other benefits of the Serverless Function is you don't need to handle the CORS policy because we are making API request from one server to another server.</ContentText>
