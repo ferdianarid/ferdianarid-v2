@@ -4,9 +4,6 @@
         @apply py-4 px-10 bg-semantic-warning-main transition-colors text-neutral-10 rounded-xl font-gilroy-bold text-heading-6;
     }
     .button-primary-sm {
-        @apply py-2 px-6 bg-primary-main transition-colors text-neutral-10 rounded-xl font-gilroy-medium text-sm;
+        @apply py-3 px-6 bg-primary-main transition-colors text-neutral-10 rounded-xl font-gilroy-medium text-sm;
     }
-    /* .btn-brand-orange {
-        @apply bg-brand-orange hover: bg-brand-orange-600 focus: bg-brand-orange-600 hover: focus: text-white;
-    } */
 }

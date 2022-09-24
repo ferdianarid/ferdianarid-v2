@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
         <div className="">
           <div className="w-full flex items-center justify-between">
-            <Link href="/portfolio">
+            <Link href="/">
               <motion.div className="hover:cursor-pointer" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
                 <h1 className="font-gilroy-bold text-2xl text-neutral-10 py-1 px-3 rounded-lg bg-primary-hover bg-opacity-50">Portfolio.</h1>
               </motion.div>

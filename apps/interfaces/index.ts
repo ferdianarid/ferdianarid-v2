@@ -9,4 +9,5 @@ export interface IRecentProject {
     fileImage: string
     title: string
     description: string
+    isLight?: boolean
 }

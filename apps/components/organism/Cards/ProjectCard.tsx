@@ -1,22 +1,38 @@
-import { Fragment } from 'react'
+import { Fragment } from "react"
 import Image from "next/image"
-import { ParagraphText } from '@components/atoms/Text'
-import { IRecentProject } from '@interfaces/index'
+import clsx from "clsx"
+import { ParagraphText } from "@components/atoms/Text"
+import { IRecentProject } from "@interfaces/index"
 
-const ProjectCard: React.FC<IRecentProject> = ({title, fileImage, description}) => {
+const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight }) => {
   return (
     <Fragment>
-        <div className="w-full h-full bg-neutral-10 relative">
-          <Image src={`/images/${fileImage}.png`} className="object-cover rounded-2xl" width={800} height={400} alt="smeshub" />
-          <div className="pt-4">
-          <h3 className="text-primary-main font-gilroy-bold text-xl">{title}</h3>
+      <div className={clsx(
+        "w-full h-full relative",
+        "border border-primary-hover rounded-2xl p-5",
+        isLight ? "" : "bg-neutral-10"
+      )}>
+        <Image src={`/images/projects/${fileImage}.png`} className="object-cover rounded-2xl" width={800} height={400} alt={fileImage} />
+        <div className="pt-4">
+          <h3 className={clsx(
+            "font-gilroy-bold text-xl",
+            isLight ? "text-neutral-10" : "text-primary-main"
+          )}>{title}</h3>
           <ParagraphText className='pt-2'>{description}</ParagraphText>
-          </div>
-          <div className="mt-6 flex space-x-2">
-          <button className="py-2 rounded-xl px-8 bg-primary-main border border-primary-main text-neutral-10 font-gilroy-medium text-sm">Open</button>
-          <button className="py-2 rounded-xl px-8 border border-primary-main bg-neutral-10 text-primary-main font-gilroy-medium text-sm">Details</button>
-          </div>
         </div>
+        <div className="mt-6 flex space-x-2">
+          <button className={clsx(
+            "py-2 rounded-xl px-8 border border-primary-main text-neutral-10 font-gilroy-medium text-sm",
+            isLight ? "bg-primary-hover" : "bg-primary-main"
+          )}>Open</button>
+          <button className={clsx(
+            "py-2 rounded-xl px-8 border font-gilroy-medium text-sm",
+            isLight ? "" : "bg-neutral-10",
+            isLight ? "text-neutral-10" : "text-primary-main",
+            isLight ? "border-primary-hover" : "border-primary-main"
+          )}>Details</button>
+        </div>
+      </div>
     </Fragment>
   )
 }
