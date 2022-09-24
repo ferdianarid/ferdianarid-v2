@@ -1,15 +1,15 @@
-import { Fragment } from 'react'
-import Head from 'next/head'
-import PagesLayout from '@layouts/PagesLayout'
-import fs from 'fs'
-import * as path from 'path'
+import { Fragment } from "react"
+import Head from "next/head"
+import PagesLayout from "@layouts/PagesLayout"
+import fs from "fs"
+import * as path from "path"
 import matter from "gray-matter"
 import { serialize } from "next-mdx-remote/serialize"
-import { MDXRemote } from 'next-mdx-remote'
-import MDXComponents from '@components/md/MDXComponents'
-import Image from 'next/image'
-import { ContentHeading } from '@components/atoms/Text'
-import { FaCalendarDay } from 'react-icons/fa'
+import { MDXRemote } from "next-mdx-remote"
+import MDXComponents from "@components/md/MDXComponents"
+import Image from "next/image"
+import { ContentHeading } from "@components/atoms/Text"
+import { FaCalendarDay } from "react-icons/fa"
 
 const PostDetail = ({ frontMatter, mdxSource }: any) => {
     const { title, author, role, category, imageUrl, createdAt } = frontMatter
@@ -55,7 +55,7 @@ const PostDetail = ({ frontMatter, mdxSource }: any) => {
 export const getStaticPaths = async () => {
     const files = fs.readdirSync(path.join("apps", "data", "posts"))
 
-    const paths = files?.map(filename => ({
+    const paths = files?.map((filename) => ({
         params: {
             postId: filename.replace(".mdx", "")
         }

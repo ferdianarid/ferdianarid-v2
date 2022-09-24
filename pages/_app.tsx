@@ -3,7 +3,7 @@ import { Fragment, useEffect } from "react"
 import NProgress from "nprogress"
 import { useRouter } from "next/router"
 import "@styles/globals.css"
-import React from "react"
+import "nprogress/nprogress.css"
 // import Script from "next/script"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router])
   return (
     <Fragment>
-        {/* <Script
+      {/* <Script
             type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700017.js"
         /> */}
       <Component {...pageProps} />
