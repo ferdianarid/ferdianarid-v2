@@ -12,12 +12,10 @@
     ],
     "array-bracket-spacing": [
       "error", "always", 
-      {"singleValue": true},
-      {"objectsInArrays": false},
-      {"arraysInArrays": false}
+      {"singleValue": false}
     ],
     "space-in-parens": ["error", "never"],
-    "object-curly-spacing": ["error", "never"],
-    "react/no-unescaped-entities": "error"
+    "object-curly-spacing": ["error", "always"],
+    "react/no-unescaped-entities": "warn"
   }
 }
