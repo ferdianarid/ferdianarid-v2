@@ -14,4 +14,5 @@ export const AllProject: IRecentProject[] = [
     { id: 5, fileImage: "cyberpunk", title: "Cyberpunk Store", description: "Small part of marketplace feature like add product to cart and remove quantity" },
     { id: 6, fileImage: "salespack", title: "Salespack", description: "Landing page about packaging product explain benefit and other" },
     { id: 7, fileImage: "timvoice", title: "Timvoice", description: "Platform Invoicing help a freelancer with business owner with paperless document" },
+    { id: 8, fileImage: "ala-frontend", title: "ALA Frontend", description: "Platform small marketplace help to connect farmer, warehouse, seller and customer" }
 ]

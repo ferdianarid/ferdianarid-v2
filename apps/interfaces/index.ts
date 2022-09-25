@@ -12,3 +12,16 @@ export interface IRecentProject {
     isLight?: boolean
     liveBadge?: boolean
 }
+
+export interface IExperience {
+    id?: number
+    position: string
+    image: string
+    startDate: string
+    endDate: string
+    company: string
+    duration: number
+    workStatus: string
+    location: string
+    description: string | any
+}
