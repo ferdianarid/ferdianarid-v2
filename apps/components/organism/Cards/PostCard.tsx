@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FaStar } from 'react-icons/fa'
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { FaStar } from "react-icons/fa"
 
 interface IPostCard {
     imagePath: string

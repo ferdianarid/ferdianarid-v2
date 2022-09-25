@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import { ContentHeading } from '@components/atoms/Text'
-import { FaCalendarDay } from 'react-icons/fa'
+import React from "react"
+import Image from "next/image"
+import { ContentHeading } from "@components/atoms/Text"
+import { FaCalendarDay } from "react-icons/fa"
 
 const CardHeader = () => {
     return (

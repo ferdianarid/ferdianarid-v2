@@ -5,15 +5,16 @@ import { motion } from "framer-motion"
 import PostsCategory from "./Popover/PostsCategory"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
+  const [ isOpen, setIsOpen ] = useState<SetStateAction<boolean | any>>(false)
   return (
     <nav className="bg-primary-pressed">
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
         <div className="">
           <div className="w-full flex items-center justify-between">
             <Link href="/">
-              <motion.div className="hover:cursor-pointer" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
-                <h1 className="font-gilroy-bold text-2xl text-neutral-10 py-1 px-3 rounded-lg bg-primary-hover bg-opacity-50">Portfolio.</h1>
+              <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
+                <h1 className="font-gilroy-bold text-2xl text-neutral-10">Portfolio.</h1>
+                <p className="text-xs text-neutral-10 font-gilroy-normal">Frontend Developer</p>
               </motion.div>
             </Link>
             <div className="mx-auto flex items-center space-between">

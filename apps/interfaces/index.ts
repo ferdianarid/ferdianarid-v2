@@ -10,4 +10,5 @@ export interface IRecentProject {
     title: string
     description: string
     isLight?: boolean
+    liveBadge?: boolean
 }

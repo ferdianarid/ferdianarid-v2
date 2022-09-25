@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
-import { ParagraphText } from '@components/atoms/Text'
+import { Fragment } from "react"
+import { ParagraphText } from "@components/atoms/Text"
 
 const Footer = () => {
     return (

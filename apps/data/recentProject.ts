@@ -1,4 +1,4 @@
-import { IRecentProject } from "@interfaces/index";
+import { IRecentProject } from "@interfaces/index"
 
 export const RecentProject: IRecentProject[] = [
     { id: 1, fileImage: "smeshub", title: "Smeshub Indonesia", description: "Platform support SME. All will sale their product to customer and communication" },

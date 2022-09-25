@@ -14,7 +14,7 @@ const nextConfig = {
         }, ]
     },
     reactStrictMode: true,
-    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+    pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
 }
 
 const withMDX = createMDX({
