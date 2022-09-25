@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
             <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-hover bg-opacity-30 py-2 px-4 rounded-lg">Engineering</p>
-            <HeadingText isLight className="my-7">Hi! I'm <span className="py-1 px-3 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
+            <HeadingText isLight className="my-7">Hi! Im <span className="py-1 px-3 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
             <ParagraphText isLight>Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
               <button className="button">Lets chat me</button>
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
             <HeadingText>About my background.</HeadingText>
           </div>
           <div className="w-full mt-5 md:mt-0 md:w-1/2 flex flex-col space-y-3">
-            <ParagraphText>Since high school I have learned the basics of website programming, even though I majored in computer and network engineering at that time. but I'm curious about the website, there I decided to explore more about HTML CSS JS</ParagraphText>
+            <ParagraphText>Since high school I have learned the basics of website programming, even though I majored in computer and network engineering at that time. but Im curious about the website, there I decided to explore more about HTML CSS JS</ParagraphText>
             <ParagraphText>and when i graduated from Vocational High School, i tried to continue to pursue that field, i tried to find a university that has a focus on information technology</ParagraphText>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           <div className="w-full md:w-1/2 mt-10 md:mt-0">
             <HeadingText>First Journey Experience.</HeadingText>
             <ParagraphText className="mt-5">First time focusing on the frontend world because of the interest in making a website that looks neat, interactive and good in terms of visuals.</ParagraphText>
-            <ParagraphText className="mt-5">The first time I became a frontend was when there was a national event called 1000 digital startups, where I participated from the initial phase of seminars, workshops, hacksprints and bootcamps. There I was taught to form a team consisting of at least 3 stakeholders such as hustler (business), hipster (design) and hacker (engineer). I was handling it as a ui ux designer and also a frontend. There I learned a lot and I think that's where my journey begins</ParagraphText>
+            <ParagraphText className="mt-5">The first time I became a frontend was when there was a national event called 1000 digital startups, where I participated from the initial phase of seminars, workshops, hacksprints and bootcamps. There I was taught to form a team consisting of at least 3 stakeholders such as hustler (business), hipster (design) and hacker (engineer). I was handling it as a ui ux designer and also a frontend. There I learned a lot and I think thats where my journey begins</ParagraphText>
           </div>
         </div>
 
