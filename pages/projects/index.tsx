@@ -30,7 +30,7 @@ const Projects = () => {
                     <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
                         <div className="">
                             <PageText isLight>All Project.</PageText>
-                            <ParagraphText>this is a project that you can view and learn anytime</ParagraphText>
+                            <ParagraphText>This is a project that you can view and learn anytime</ParagraphText>
                         </div>
                         <div className="flex items-center">
                             <input ref={queryRefs} className="bg-primary-hover text-heading-6 py-2 px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" type="text" placeholder="Search Project" name="query" id="query" />

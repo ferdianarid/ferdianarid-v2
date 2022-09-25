@@ -2,6 +2,8 @@ import { Fragment } from "react"
 import Head from "next/head"
 import PagesLayout from "@layouts/PagesLayout"
 import { PageText, ParagraphText } from "@components/atoms/Text"
+import { DataExperience } from "apps/data/experience"
+import ExperienceCard from "@components/organism/Cards/ExperienceCard"
 
 const Experience = () => {
     return (
@@ -19,11 +21,24 @@ const Experience = () => {
                     <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
                         <div className="">
                             <PageText isLight>Experience.</PageText>
-                            <ParagraphText>this is a project that you can view and learn anytime</ParagraphText>
+                            <ParagraphText>This is my Work Experience that you can view</ParagraphText>
                         </div>
                     </div>
                     <div className="w-full">
-
+                        {DataExperience.map((experience: any) => (
+                            <ExperienceCard
+                                key={experience.id}
+                                position={experience.position}
+                                image={experience.image}
+                                startDate={experience.startDate}
+                                endDate={experience.endDate}
+                                company={experience.company}
+                                duration={experience.duration}
+                                workStatus={experience.workStatus}
+                                location={experience.location}
+                                description={experience.description}
+                            />
+                        ))}
                     </div>
                 </div>
             </PagesLayout>
