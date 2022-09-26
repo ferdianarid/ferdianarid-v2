@@ -6,6 +6,27 @@
     font-family: "Gilroy", sans-serif;
 }
 
+.login {
+    background-image: url(../../public/images/auth/research.svg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.register {
+    background-image: url(../../public/images/auth/research.svg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .hero,
+    .register {
+        background-position: center
+    }
+}
+
 @import 'components.css';
 @font-face {
     font-family: "gilroy-bold";

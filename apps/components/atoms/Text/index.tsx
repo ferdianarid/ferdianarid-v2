@@ -9,7 +9,7 @@ interface ITextProps {
 
 export const HeadingText: React.FC<ITextProps> = ({ children, isLight, className }) => {
     return <h1 className={clsx(
-        isLight ? "text-neutral-10" : "text-primary-pressed",
+        isLight ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-600 pb-2 to-yellow-400" : "text-transparent bg-clip-text bg-gradient-to-r from-purple-800 pb-2 to-yellow-400",
         "font-gilroy-bold text-5xl md:text-7xl",
         className
     )}> {children}</h1 >
@@ -53,4 +53,10 @@ export const PointHeading: React.FC<ITextProps> = ({ children, isLight, classNam
         "font-gilroy-bold text-xl md:text-3xl",
         className
     )}>{children}</h1>
+}
+
+export const ErrorText: React.FC<any> = ({ children }) => {
+    return (
+        <h1 className="py-1 px-2 bg-red-100 w-fit rounded-md mt-1 font-gilroy-medium text-xs text-red-600">{children}</h1>
+    )
 }

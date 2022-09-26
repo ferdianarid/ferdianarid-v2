@@ -12,7 +12,7 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
         "w-full h-full relative",
         "rounded-2xl",
         isLight ? "border border-primary-hover" : "",
-        isLight ? "p-5" : "",
+        isLight ? "p-5" : "p-5",
         isLight ? "" : "bg-neutral-10"
       )}>
         <Image src={`/images/projects/${fileImage}.png`} className="object-cover rounded-2xl" width={800} height={400} alt={fileImage} />

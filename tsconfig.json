@@ -6,6 +6,9 @@
         "@pages/*": [
           "pages/*"
         ],
+        "@firebase/*": [
+          "firebase/*"
+        ],
         "@animation/*": [
           "apps/animation/*"
         ],

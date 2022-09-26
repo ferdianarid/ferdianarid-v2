@@ -26,14 +26,14 @@ const Home: NextPage = () => {
         <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
             <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-hover bg-opacity-30 py-2 px-4 rounded-lg">Engineering</p>
-            <HeadingText isLight className="my-7">Hi! Im <span className="py-1 px-3 rounded-lg bg-primary-hover font-gilroy-bold bg-opacity-50">Ferdian</span></HeadingText>
+            <h1 className="my-7 text-neutral-10 font-gilroy-bold text-5xl md:text-7xl">Hi! I&apos;m <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
             <ParagraphText isLight>Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
               <button className="button">Lets chat me</button>
             </div>
           </div>
           <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
-            <div className="w-full border-8 border-neutral-10 h-full bg-semantic-warning-main relative rounded-3xl flex items-center justify-center pt-20 md:pt-5">
+            <div className="w-full border-8 border-neutral-10 h-full bg-gradient-to-r from-purple-600  to-yellow-400 relative rounded-3xl flex items-center justify-center pt-20 md:pt-5">
               <Image src="/images/ferdian.png" className="z-10" width={340} height={420} alt="ferdian" />
               <div className="absolute -top-16 right-0 h-40 w-64 ">
               </div>
@@ -91,12 +91,14 @@ const Home: NextPage = () => {
         <div className="w-full px-6 md:px-24 py-24">
           <HeadingText className="text-center">My Recent Project.</HeadingText>
           <ParagraphText className="text-center mt-5">This is my recent project three month ago</ParagraphText>
-          <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-6 mt-8">
             {RecentProject.map((item: any) => (
               <ProjectCard key={item.id} id={item.id} fileImage={item.fileImage} title={item.title} description={item.description} />
             ))}
           </div>
         </div>
+        <div className="w-full bg-primary-pressed md:h-[350px] md:-mt-[300px]"></div>
+        <div className="w-full bg-neutral-10 h-[400px]"></div>
       </PagesLayout>
     </Fragment>
   )

@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import PostsCategory from "./Popover/PostsCategory"
 
 const Navbar = () => {
-  const [ isOpen, setIsOpen ] = useState<SetStateAction<boolean | any>>(false)
+  const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
   return (
     <nav className="bg-primary-pressed">
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
@@ -39,9 +39,12 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block">
-              <Link href="/">
-                <button className="py-3 px-5  transition-colors bg-semantic-warning-main text-neutral-10 font-gilroy-bold text-heading-6 rounded-xl">Email Me</button>
+            <div className="hidden md:flex items-center space-x-2">
+              <Link href="/auth/signin">
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">Sign In</button>
+              </Link>
+              <Link href="/auth/signup">
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">Sign Up</button>
               </Link>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
@@ -90,18 +93,23 @@ const Navbar = () => {
                   </Link>
                   <PostsCategory textColors="text-neutral-10" />
                   <Link href="/experience">
-                    <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       Experience
                     </motion.a>
                   </Link>
                   <Link href="/services">
-                    <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       Services
                     </motion.a>
                   </Link>
-                  <Link href="/">
-                    <button className="py-3 px-5 transition-colors bg-semantic-warning-main text-neutral-10 font-gilroy-bold text-heading-6 rounded-xl">Email Me</button>
-                  </Link>
+                  <div className="flex items-center space-x-2">
+                    <Link href="/auth/signin">
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">Sign In</button>
+                    </Link>
+                    <Link href="/auth/signup">
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">Sign Up</button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
