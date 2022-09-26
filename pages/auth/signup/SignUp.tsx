@@ -46,16 +46,16 @@ const SignUp: NextPage = () => {
             console.log(user)
             setIsLoading(false)
 
-            toast.success("Register Success")
+            toast.success("Register Account Successfully")
             setTimeout(() => {
-                router.push("/auth/login")
+                router.push("/auth/signin")
             }, 2000)
         } catch (error: any) {
             console.log(error)
             setIsLoading(false)
 
-            toast.error("Register Failed")
-            router.push("/auth/register")
+            toast.error("Register Account Failed")
+            router.reload()
         }
     }
     return (

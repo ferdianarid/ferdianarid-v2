@@ -41,7 +41,7 @@ const SignIn: NextPage = () => {
             console.log(user)
             setIsLoading(false)
 
-            toast.success("Login Success")
+            toast.success("Successfully Sign in")
             setTimeout(() => {
                 router.push("/")
             }, 2000)
@@ -49,8 +49,8 @@ const SignIn: NextPage = () => {
             console.log(error)
             setIsLoading(false)
 
-            toast.error("User not found")
-            router.push("/auth/login")
+            toast.error("Failed Sign in")
+            router.reload()
         }
     }
     return (
