@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const createMDX = require("@next/mdx")
-const isProduction = process.env.NODE_ENV === "production"
+    // const isProduction = process.env.NODE_ENV === "production"
 
 const nextConfig = {
     reactStrictMode: true,
     env: {
         serviceBackend: "http://localhost:8800", // example config port Backend
     },
-    assetPrefix: isProduction ? "" : "http://localhost:3000",
+    // assetPrefix: isProduction ? "" : "http://localhost:3000",
     i18n: {
         locales: ["id-ID"],
         defaultLocale: "id-ID",
