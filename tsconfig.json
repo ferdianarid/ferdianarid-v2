@@ -9,6 +9,9 @@
         "@firebase/*": [
           "firebase/*"
         ],
+        "@locales/*": [
+          "locales/*"
+        ],
         "@animation/*": [
           "apps/animation/*"
         ],

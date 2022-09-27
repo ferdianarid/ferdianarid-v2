@@ -9,8 +9,8 @@ const nextConfig = {
     },
     // assetPrefix: isProduction ? "" : "http://localhost:3000",
     i18n: {
-        locales: ["id-ID"],
-        defaultLocale: "id-ID",
+        locales: ["id", "en", "fr", "de", "au", "uk"],
+        defaultLocale: "en",
     },
     swcMinify: true,
     reactStrictMode: true,

@@ -4,8 +4,15 @@ import clsx from "clsx"
 import { ParagraphText } from "@components/atoms/Text"
 import { IRecentProject } from "@interfaces/index"
 import { LiveBadge } from "@components/atoms/Badge"
+import { useRouter } from "next/router"
+import id from "@locales/id"
+import en from "@locales/en"
 
 const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight, liveBadge }) => {
+  const router = useRouter()
+  const { locale } = router
+
+  const lang = locale === "id" ? id : en
   return (
     <Fragment>
       <div className={clsx(
@@ -30,13 +37,13 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
           <button className={clsx(
             "py-2 rounded-xl px-8 border border-primary-main text-neutral-10 font-gilroy-medium text-sm",
             isLight ? "bg-primary-hover" : "bg-primary-main"
-          )}>Open</button>
+          )}>{lang.buttonOpenProject}</button>
           <button className={clsx(
             "py-2 rounded-xl px-8 border font-gilroy-medium text-sm",
             isLight ? "" : "bg-neutral-10",
             isLight ? "text-neutral-10" : "text-primary-main",
             isLight ? "border-primary-hover" : "border-primary-main"
-          )}>Details</button>
+          )}>{lang.buttonDetailProject}</button>
         </div>
       </div>
     </Fragment>

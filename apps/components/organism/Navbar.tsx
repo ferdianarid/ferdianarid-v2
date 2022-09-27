@@ -3,9 +3,24 @@ import Link from "next/link"
 import { Transition } from "@headlessui/react"
 import { motion } from "framer-motion"
 import PostsCategory from "./Popover/PostsCategory"
+import { useRouter } from "next/router"
+import Image from "next/image"
+import en from "@locales/en"
+import id from "@locales/id"
+import { LanguageList } from "apps/data/data"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
+
+  const router = useRouter()
+  const { locale } = router
+
+  const lang = locale === "id" ? id : en
+
+  const changeLanguage = (e: any) => {
+    const locale = e.target.value
+    router.push(router.pathname, router.asPath, { locale })
+  }
   return (
     <nav className="bg-primary-pressed">
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
@@ -13,7 +28,7 @@ const Navbar = () => {
           <div className="w-full flex items-center justify-between">
             <Link href="/">
               <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
-                <h1 className="font-gilroy-bold text-2xl text-neutral-10">Portfolio.</h1>
+                <h1 className="font-gilroy-bold text-2xl text-neutral-10">{lang.brandPortfolio}</h1>
                 <p className="text-xs text-neutral-10 font-gilroy-normal">Frontend Developer</p>
               </motion.div>
             </Link>
@@ -21,30 +36,49 @@ const Navbar = () => {
               <div className="hidden md:block">
                 <div className="ml-16 flex items-center space-x-10 relative z-20">
                   <Link href="/projects">
-                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
-                      Projects
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                      {lang.navigationProject}
+                    </motion.p>
                   </Link>
                   <PostsCategory textColors="text-neutral-10" />
                   <Link href="/experience">
-                    <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
-                      Experience
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                      {lang.navigationExperience}
+                    </motion.p>
                   </Link>
                   <Link href="/services">
-                    <motion.a href="/jobs" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
-                      Services
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                      {lang.navigationService}
+                    </motion.p>
                   </Link>
+                  {/* Select Language */}
+                  <select
+                    onChange={changeLanguage}
+                    className="bg-transparent text-neutral-10 text-sm font-gilroy-medium py-2"
+                  >
+                    {LanguageList?.map((item: any) => (
+                      <option
+                        key={item.id}
+                        value={item.value}
+                        className="font-gilroy-medium text-primary-pressed text-sm hover:cursor-pointer py-3 transition duration-150 ease-in-out hover:bg-primary-hover flex items-center focus:outline-none hover:text-neutral-10"
+                      >
+                        {/* <div className="flex items-center space-x-2 w-fit"> */}
+                        <p className="text-sm font-gilroy-medium py-2">
+                          {item.name}
+                        </p>
+                        {/* </div> */}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-2">
               <Link href="/auth/signin">
-                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">Sign In</button>
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">{lang.signInButton}</button>
               </Link>
               <Link href="/auth/signup">
-                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">Sign Up</button>
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
               </Link>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
@@ -87,27 +121,46 @@ const Navbar = () => {
               <div className="md:hidden" id="mobile-menu">
                 <div ref={ref} className="py-2 mb-7 px-5 mt-4 md:mt-0 flex flex-col space-y-3">
                   <Link href="/projects">
-                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer">
-                      Projects
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer">
+                      {lang.navigationProject}
+                    </motion.p>
                   </Link>
                   <PostsCategory textColors="text-neutral-10" />
                   <Link href="/experience">
-                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
-                      Experience
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                      {lang.navigationExperience}
+                    </motion.p>
                   </Link>
                   <Link href="/services">
-                    <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
-                      Services
-                    </motion.a>
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                      {lang.navigationService}
+                    </motion.p>
                   </Link>
+                  {/* Select Language */}
+                  <select
+                    onChange={changeLanguage}
+                    className="bg-transparent text-neutral-10 text-sm font-gilroy-medium py-2"
+                  >
+                    {LanguageList.map((item: any) => (
+                      <option
+                        key={item.id}
+                        value={item.value}
+                        className="font-gilroy-medium text-primary-pressed text-sm hover:cursor-pointer py-3 px-0 transition duration-150 ease-in-out hover:bg-primary-hover flex items-center focus:outline-none hover:text-neutral-10"
+                      >
+                        {/* <div className="flex items-center space-x-2 w-fit"> */}
+                        <p className="text-sm font-gilroy-medium py-2 px-0">
+                          {item.name}
+                        </p>
+                        {/* </div> */}
+                      </option>
+                    ))}
+                  </select>
                   <div className="flex items-center space-x-2">
                     <Link href="/auth/signin">
-                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">Sign In</button>
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">{lang.signInButton}</button>
                     </Link>
                     <Link href="/auth/signup">
-                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">Sign Up</button>
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
                     </Link>
                   </div>
                 </div>

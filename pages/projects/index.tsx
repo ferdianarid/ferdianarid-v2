@@ -5,9 +5,17 @@ import { PageText, ParagraphText } from "@components/atoms/Text"
 import { AllProject } from "apps/data/recentProject"
 import ProjectCard from "@components/organism/Cards/ProjectCard"
 import { FaSearch } from "react-icons/fa"
+import id from "@locales/id"
+import en from "@locales/en"
+import { useRouter } from "next/router"
 
 const Projects = () => {
     const queryRefs = useRef<HTMLInputElement>(null)
+
+    const router = useRouter()
+    const { locale } = router
+
+    const lang = locale === "id" ? id : en
 
     const queryHandler = () => {
         if (queryRefs.current !== null) {
@@ -29,11 +37,11 @@ const Projects = () => {
                 <div className="w-full bg-primary-pressed py-10 px-6 md:px-24">
                     <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
                         <div className="">
-                            <PageText isLight>All Project.</PageText>
-                            <ParagraphText>This is a project that you can view and learn anytime</ParagraphText>
+                            <PageText isLight>{lang.headerProject}</PageText>
+                            <ParagraphText>{lang.subheaderProject}</ParagraphText>
                         </div>
                         <div className="flex items-center">
-                            <input ref={queryRefs} className="bg-primary-hover text-heading-6 py-2 px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" type="text" placeholder="Search Project" name="query" id="query" />
+                            <input ref={queryRefs} className="bg-primary-hover text-heading-6 py-2 px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" type="text" placeholder={lang.searchbarProject} name="query" id="query" />
                             <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-primary-hover"><FaSearch size={21} /></button>
                         </div>
                     </div>
