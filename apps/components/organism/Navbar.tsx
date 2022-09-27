@@ -77,10 +77,10 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex items-center space-x-2">
               <Link href="/auth/signin">
-                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">{lang.signInButton}</button>
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-bold text-sm text-semantic-warning-main">{lang.signInButton}</button>
               </Link>
               <Link href="/auth/signup">
-                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
+                <button className="px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-bold bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
               </Link>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
@@ -167,10 +167,10 @@ const Navbar = () => {
                   </select>
                   <div className="flex items-center space-x-2">
                     <Link href="/auth/signin">
-                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium text-sm text-semantic-warning-main">{lang.signInButton}</button>
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-bold text-sm text-semantic-warning-main">{lang.signInButton}</button>
                     </Link>
                     <Link href="/auth/signup">
-                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-medium bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
+                      <button className="w-full px-5 py-3 rounded-lg border border-semantic-warning-main font-gilroy-bold bg-semantic-warning-main text-sm text-neutral-10">{lang.signUpButton}</button>
                     </Link>
                   </div>
                 </div>

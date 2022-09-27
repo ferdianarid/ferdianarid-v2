@@ -1,14 +1,14 @@
+import { NextPage } from "next"
+import * as Yup from "yup"
 import { Fragment, SetStateAction, useState } from "react"
 import Head from "next/head"
-import { FaGithub, FaGoogle } from "react-icons/fa"
-import AuthLayout from "@layouts/AuthLayout"
 import Link from "next/link"
-import { NextPage } from "next"
-import toast from "react-hot-toast"
-import { useRouter } from "next/router"
-import { Form, Formik, Field, ErrorMessage } from "formik"
-import * as Yup from "yup"
 import { signInWithEmailAndPassword } from "firebase/auth"
+import { useRouter } from "next/router"
+import { FaGithub, FaGoogle } from "react-icons/fa"
+import toast from "react-hot-toast"
+import AuthLayout from "@layouts/AuthLayout"
+import { Form, Formik, Field, ErrorMessage } from "formik"
 import { auth } from "@firebase/firebaseConfig"
 import { useGithubOAuth, useGoogleOAuth } from "@hooks/useLogin"
 import { ErrorText } from "@components/atoms/Text"
@@ -43,8 +43,8 @@ const SignIn: NextPage = () => {
 
             toast.success("Successfully Sign in")
             setTimeout(() => {
-                router.push("/")
-            }, 2000)
+                router.push("/account")
+            }, 3000)
         } catch (error: any) {
             console.log(error)
             setIsLoading(false)
@@ -64,21 +64,21 @@ const SignIn: NextPage = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <AuthLayout>
-                <div className="w-full bg-primary-pressed text-neutral-10 px-6 md:px-24 flex pb-10 flex-col md:flex-row justify-between md:justify-between md:space-x-16 items-center">
-                    <div className="w-full md:w-1/2 mt-3 mx-auto px-10 py-10 rounded-3xl border border-primary-hover">
-                        <h1 className="text-2xl font-gilroy-semibold text-neutral-10 text-center">Sign In to your Account</h1>
-                        <h1 className="text-sm mt-2 font-gilroy-normal text-neutral-10 text-center">Lets sign in first to access all features</h1>
+                <div className="w-full bg-neutral-10 dark:bg-primary-pressed text-neutral-10 px-6 md:px-24 flex pb-10 flex-col md:flex-row justify-between md:justify-between md:space-x-16 items-center">
+                    <div className="w-full md:w-1/2 mt-3 mx-auto px-10 py-10 rounded-3xl border border-neutral-30 dark:border-primary-hover">
+                        <h1 className="text-2xl font-gilroy-bold text-primary-pressed dark:text-neutral-10 text-center">Sign In to your Account</h1>
+                        <h1 className="text-sm mt-2 font-gilroy-normal text-primary-pressed dark:text-neutral-10 text-center">Lets sign in first to access all features</h1>
                         <Formik initialValues={initialValues} validationSchema={schemaValidations} onSubmit={SignIn}>
                             <Form>
                                 <div className="mt-4">
-                                    <p className="text-sm font-gilroy-medium text-neutral-10">Email Address <span className="text-semantic-danger-main">*</span></p>
-                                    <Field className="text-md bg-primary-hover focus:bg-primary-pressed border-none mt-2 py-3 px-4 rounded-lg w-full focus:outline-none focus:border-2 focus:outline-semantic-warning-main" type="email" name="email" id="email" placeholder="Email Address" />
+                                    <p className="text-sm font-gilroy-medium text-primary-pressed dark:text-neutral-10">Email Address <span className="text-semantic-danger-main">*</span></p>
+                                    <Field className="text-md bg-slate-100 dark:bg-primary-hover text-primary-pressed dark:text-neutral-10 dark:focus:bg-primary-pressed focus:bg-neutral-10 border-none mt-2 py-3 px-4 rounded-lg w-full focus:outline-none focus:border-2 focus:outline-semantic-warning-main" type="email" name="email" id="email" placeholder="Email Address" />
                                     <ErrorMessage name="email" component={ErrorText} />
                                 </div>
 
                                 <div className="mt-4">
-                                    <p className="text-sm font-gilroy-medium text-neutral-10">Password <span className="text-semantic-danger-main">*</span></p>
-                                    <Field className="text-md bg-primary-hover focus:bg-primary-pressed border-none mt-2 py-3 px-4 rounded-lg w-full focus:outline-none focus:border-2 focus:outline-semantic-warning-main" type="password" name="password" id="password" placeholder="Password" />
+                                    <p className="text-sm font-gilroy-medium text-primary-pressed dark:text-neutral-10">Password <span className="text-semantic-danger-main">*</span></p>
+                                    <Field className="text-md text-primary-pressed dark:text-neutral-10 bg-slate-100 dark:bg-primary-hover dark:focus:bg-primary-pressed focus:bg-neutral-10 border-none mt-2 py-3 px-4 rounded-lg w-full focus:outline-none focus:border-2 focus:outline-semantic-warning-main" type="password" name="password" id="password" placeholder="Password" />
                                     <ErrorMessage name="password" component={ErrorText} />
                                 </div>
 
@@ -90,19 +90,19 @@ const SignIn: NextPage = () => {
                             </Form>
                         </Formik>
 
-                        <p className="text-sm mt-4 font-gilroy-normal text-neutral-10 text-center">Or sign in using</p>
+                        <p className="text-sm mt-4 font-gilroy-normal text-primary-pressed dark:text-neutral-10 text-center">Or sign in using</p>
 
                         <div className="w-full flex flex-col md:flex-row items-center justify-between md:space-x-2 md:space-y-0 space-y-3 mt-4">
-                            <button onClick={SignInWithGoogle} className="py-3 font-gilroy-bold px-4 rounded-lg w-full text-sm flex items-center justify-center gap-x-3 border border-primary-hover">
+                            <button onClick={SignInWithGoogle} className="py-3 font-gilroy-bold px-4 text-primary-pressed dark:text-neutral-10 rounded-lg w-full text-sm flex items-center justify-center gap-x-3 border border-primary-hover">
                                 <FaGoogle size={24} />
                                 {isGoogleLoading ? "Authenticate ..." : "Sign In with Google"}</button>
 
-                            <button onClick={SignInWithGithub} className="py-3 font-gilroy-bold px-4 rounded-lg w-full text-sm flex items-center justify-center gap-x-3 border border-primary-hover">
+                            <button onClick={SignInWithGithub} className="py-3 font-gilroy-bold px-4 text-primary-pressed dark:text-neutral-10 rounded-lg w-full text-sm flex items-center justify-center gap-x-3 border border-primary-hover">
                                 <FaGithub size={24} />
                                 {isGithubLoading ? "Authenticate ..." : "Sign In with Github"}</button>
                         </div>
 
-                        <p className="text-sm mt-4 font-gilroy-normal text-neutral-10 text-center">Not registered yet ?
+                        <p className="text-sm mt-4 font-gilroy-normal text-primary-pressed dark:text-neutral-10 text-center">Not registered yet ?
                             <Link href="/auth/signup">
                                 <span className="font-gilroy-bold text-blue-500 ml-2 hover:cursor-pointer">Sign Up Account</span>
                             </Link>
