@@ -4,10 +4,10 @@ import { Transition } from "@headlessui/react"
 import { motion } from "framer-motion"
 import PostsCategory from "./Popover/PostsCategory"
 import { useRouter } from "next/router"
-import Image from "next/image"
 import en from "@locales/en"
 import id from "@locales/id"
 import { LanguageList } from "apps/data/data"
+import Switcher from "@components/atoms/Button/Switcher"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
@@ -22,44 +22,44 @@ const Navbar = () => {
     router.push(router.pathname, router.asPath, { locale })
   }
   return (
-    <nav className="bg-primary-pressed">
+    <nav className="bg-neutral-10 dark:bg-primary-pressed">
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
         <div className="">
           <div className="w-full flex items-center justify-between">
             <Link href="/">
               <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
-                <h1 className="font-gilroy-bold text-2xl text-neutral-10">{lang.brandPortfolio}</h1>
-                <p className="text-xs text-neutral-10 font-gilroy-normal">Frontend Developer</p>
+                <h1 className="font-gilroy-bold text-2xl text-primary-pressed dark:text-neutral-10">{lang.brandPortfolio}</h1>
+                <p className="text-xs text-primary-pressed dark:text-neutral-10 font-gilroy-normal">Frontend Developer</p>
               </motion.div>
             </Link>
             <div className="mx-auto flex items-center space-between">
               <div className="hidden md:block">
                 <div className="ml-16 flex items-center space-x-10 relative z-20">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
-                  <PostsCategory textColors="text-neutral-10" />
+                  <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
                       {lang.navigationExperience}
                     </motion.p>
                   </Link>
                   <Link href="/services">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
                       {lang.navigationService}
                     </motion.p>
                   </Link>
                   <Link href="/account">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       {lang.navigationAccount}
                     </motion.p>
                   </Link>
                   {/* Select Language */}
                   <select
                     onChange={changeLanguage}
-                    className="bg-transparent text-neutral-10 text-sm font-gilroy-medium py-2"
+                    className="bg-transparent text-primary-pressed dark:text-neutral-10 text-sm font-gilroy-medium py-2"
                   >
                     {LanguageList?.map((item: any) => (
                       <option
@@ -71,6 +71,7 @@ const Navbar = () => {
                       </option>
                     ))}
                   </select>
+                  <Switcher />
                 </div>
               </div>
             </div>
@@ -83,6 +84,9 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
+              <div className="block mr-2 mt-1 md:hidden">
+                <Switcher />
+              </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -93,10 +97,10 @@ const Navbar = () => {
                 <span className="sr-only">Open main menu</span>
                 {!isOpen
                   ? (
-                    <svg width="24" height="24" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 1.9999C0.799805 1.11625 1.51615 0.399902 2.3998 0.399902H21.5998C22.4835 0.399902 23.1998 1.11625 23.1998 1.9999C23.1998 2.88356 22.4835 3.5999 21.5998 3.5999H2.3998C1.51615 3.5999 0.799805 2.88356 0.799805 1.9999Z" fill="white" />
-                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 9.9999C0.799805 9.11625 1.51615 8.3999 2.3998 8.3999H11.9998C12.8835 8.3999 13.5998 9.11625 13.5998 9.9999C13.5998 10.8836 12.8835 11.5999 11.9998 11.5999H2.3998C1.51615 11.5999 0.799805 10.8836 0.799805 9.9999Z" fill="white" />
-                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 17.9999C0.799805 17.1162 1.51615 16.3999 2.3998 16.3999H21.5998C22.4835 16.3999 23.1998 17.1162 23.1998 17.9999C23.1998 18.8836 22.4835 19.5999 21.5998 19.5999H2.3998C1.51615 19.5999 0.799805 18.8836 0.799805 17.9999Z" fill="white" />
+                    <svg width="24" height="24" viewBox="0 0 24 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 1.9999C0.799805 1.11625 1.51615 0.399902 2.3998 0.399902H21.5998C22.4835 0.399902 23.1998 1.11625 23.1998 1.9999C23.1998 2.88356 22.4835 3.5999 21.5998 3.5999H2.3998C1.51615 3.5999 0.799805 2.88356 0.799805 1.9999Z" fill="currentColor" />
+                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 9.9999C0.799805 9.11625 1.51615 8.3999 2.3998 8.3999H11.9998C12.8835 8.3999 13.5998 9.11625 13.5998 9.9999C13.5998 10.8836 12.8835 11.5999 11.9998 11.5999H2.3998C1.51615 11.5999 0.799805 10.8836 0.799805 9.9999Z" fill="currentColor" />
+                      <path fillRule="evenodd" clipRule="evenodd" d="M0.799805 17.9999C0.799805 17.1162 1.51615 16.3999 2.3998 16.3999H21.5998C22.4835 16.3999 23.1998 17.1162 23.1998 17.9999C23.1998 18.8836 22.4835 19.5999 21.5998 19.5999H2.3998C1.51615 19.5999 0.799805 18.8836 0.799805 17.9999Z" fill="currentColor" />
                     </svg>
                   )
                   : (
@@ -122,30 +126,30 @@ const Navbar = () => {
               <div className="md:hidden" id="mobile-menu">
                 <div ref={ref} className="py-2 mb-7 px-5 mt-4 md:mt-0 flex flex-col space-y-3">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-neutral-10 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-primary-pressed dark:text-neutral-10 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer">
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
-                  <PostsCategory textColors="text-neutral-10" />
+                  <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       {lang.navigationExperience}
                     </motion.p>
                   </Link>
                   <Link href="/services">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       {lang.navigationService}
                     </motion.p>
                   </Link>
                   <Link href="/account">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
                       {lang.navigationAccount}
                     </motion.p>
                   </Link>
                   {/* Select Language */}
                   <select
                     onChange={changeLanguage}
-                    className="bg-transparent text-neutral-10 text-sm font-gilroy-medium py-2"
+                    className="bg-transparent text-primary-pressed dark:text-neutral-10 text-sm font-gilroy-medium py-2"
                   >
                     {LanguageList.map((item: any) => (
                       <option

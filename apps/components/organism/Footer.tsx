@@ -4,7 +4,7 @@ import { ParagraphText } from "@components/atoms/Text"
 const Footer = () => {
     return (
         <Fragment>
-            <div className="w-full px-6 md:px-24 py-24 bg-primary-pressed">
+            <div className="w-full px-6 md:px-24 py-24 bg-neutral-20 dark:bg-primary-pressed">
                 <div className="grid grid-cols-2 gap-y-10 md:grid-cols-5 md:gap-5">
                     <div className="col-span-2">
                         <h1 className="font-gilroy-bold text-3xl text-neutral-10">Portfolio.</h1>
@@ -12,7 +12,7 @@ const Footer = () => {
                         <ParagraphText className="mt-10">&copy;2022 Ferdian Ahmad R</ParagraphText>
                     </div>
                     <div className="">
-                        <h1 className="font-gilroy-bold text-xl text-neutral-10">Discover</h1>
+                        <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Discover</h1>
                         <div className="grid gap-y-4 mt-5">
                             <ParagraphText>Services</ParagraphText>
                             <ParagraphText>Projects</ParagraphText>
@@ -21,7 +21,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="">
-                        <h1 className="font-gilroy-bold text-xl text-neutral-10">Social Media</h1>
+                        <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Social Media</h1>
                         <div className="grid gap-y-4 mt-5">
                             <ParagraphText>Github</ParagraphText>
                             <ParagraphText>LinkedIn</ParagraphText>
@@ -30,7 +30,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="">
-                        <h1 className="font-gilroy-bold text-xl text-neutral-10">Feedback</h1>
+                        <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Feedback</h1>
                         <div className="mt-5">
                             <ParagraphText>Give me a feedback for make this web more better</ParagraphText>
                             <input type="text" name="feedback" id="feedback" placeholder="Type a feedback" className="mt-4 rounded-lg text-md focus:outline-semantic-warning-main border-none py-2 px-4" />
