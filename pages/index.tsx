@@ -30,17 +30,17 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <PagesLayout>
-        <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full bg-neutral-10 dark:bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
-            <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-hover bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>
-            <h1 className="my-7 text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
+            <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-pressed dark:bg-primary-hover dark:bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>
+            <h1 className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
             <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
               <button className="button">{lang.email}</button>
             </div>
           </div>
           <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
-            <div className="w-full border-8 border-neutral-10 h-full bg-gradient-to-r from-purple-600  to-yellow-400 relative rounded-3xl flex items-center justify-center pt-20 md:pt-5">
+            <div className="w-full border-8 border-primary-pressed dark:border-neutral-10 h-full bg-gradient-to-r from-purple-600  to-yellow-400 relative rounded-3xl flex items-center justify-center pt-20 md:pt-5">
               <Image src="/images/ferdian.png" className="z-10" width={340} height={420} alt="ferdian" />
               <div className="absolute -top-16 right-0 h-40 w-64 ">
               </div>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
               <div className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
                 <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />
               </div>
-              <div className="absolute left-5 rounded-xl -top-10 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
+              <div className="absolute left-5 rounded-xl -top-14 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
                 <Image src="/images/react-logo.png" width={80} height={70} alt="react" />
               </div>
             </div>
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="w-full bg-primary-pressed px-6 mt-16 md:mt-0 md:px-24 py-24 flex flex-col md:flex-row justify-between">
+        <div className="w-full bg-neutral-20 dark:bg-primary-pressed px-6 mt-16 md:mt-0 md:px-24 py-24 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-1/2">
             <HeadingText isLight className="text-center md:text-left">{lang.technology}</HeadingText>
           </div>
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
             ))}
           </div>
         </div>
-        <div className="w-full bg-primary-pressed md:h-[350px] md:-mt-[300px]"></div>
+        <div className="w-full bg-neutral-20 dark:bg-primary-pressed md:h-[350px] md:-mt-[300px]"></div>
         <div className="w-full bg-neutral-10 h-[400px]"></div>
       </PagesLayout>
     </Fragment>

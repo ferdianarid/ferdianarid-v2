@@ -24,7 +24,7 @@ const Experience = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <PagesLayout>
-                <div className="w-full bg-primary-pressed py-10 px-6 md:px-24">
+                <div className="w-full bg-neutral-10 dark:bg-primary-pressed py-10 px-6 md:px-24">
                     <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
                         <div className="">
                             <PageText isLight>{lang.headerExperience}</PageText>
