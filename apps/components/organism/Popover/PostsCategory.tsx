@@ -3,12 +3,20 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Popover, Transition } from "@headlessui/react"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
+import { useRouter } from "next/router"
+import id from "@locales/id"
+import en from "@locales/en"
 
 const PostsCategory = ({ textColors }: any) => {
+    const router = useRouter()
+    const { locale } = router
+
+    const lang = locale === "id" ? id : en
+
     const CategoryList = [
-        { id: 1, title: "All Posts", pathUrl: "/posts" },
-        { id: 2, title: "Web Development", pathUrl: "/web-development" },
-        { id: 2, title: "Product Design", pathUrl: "/product-design" }
+        { id: 1, title: lang.allPostCategory, pathUrl: `/${lang.allPostRoute}` },
+        { id: 2, title: lang.webDevCategory, pathUrl: `/${lang.webDevRoute}` },
+        { id: 3, title: lang.productDesignCategory, pathUrl: `/${lang.productDesignRoute}` }
     ]
     return (
         <React.Fragment>
@@ -16,11 +24,11 @@ const PostsCategory = ({ textColors }: any) => {
                 {({ open }) => (
                     <>
                         <Popover.Button
-                            className="flex items-center focus:outline-none text-headline-7 text-primary-border font-normal"
+                            className="flex items-center focus:outline-none text-headline-7 text-primary-border font-gilroy-normal"
                         >
                             {/* eslint-disable-next-line quotes */}
                             <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer`}>
-                                Posts
+                                {lang.navigationPosts}
                                 {open ? <FaChevronUp /> : <FaChevronDown />}
                             </motion.a>
                         </Popover.Button>

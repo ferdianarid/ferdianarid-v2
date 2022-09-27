@@ -28,10 +28,10 @@ const SignUp: NextPage = () => {
             .email("Invalid Email Address")
             .required("Field Email Required"),
         password: Yup.string()
-            .min(8, "Password must be more than 3 character")
+            .min(8, "Password must be more than 8 character")
             .required("Field Password Required"),
         confirmPassword: Yup.string()
-            .min(8, "Password must be more than 3 character")
+            .min(8, "Password must be more than 8 character")
             .oneOf([ Yup.ref("password"), null ], "Password Confirmation must match with Password")
             .required("Field Confirm Password Required"),
     })

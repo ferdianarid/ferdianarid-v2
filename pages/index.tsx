@@ -10,8 +10,15 @@ import ProjectCard from "@components/organism/Cards/ProjectCard"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
 import { TechList } from "apps/data/data"
 import TechIcon from "@components/atoms/Images/TechIcon"
+import { useRouter } from "next/router"
+import en from "@locales/en"
+import id from "@locales/id"
 
 const Home: NextPage = () => {
+  const router = useRouter()
+  const { locale } = router
+
+  const lang = locale === "id" ? id : en
   return (
     <Fragment>
       <Head>
@@ -25,11 +32,11 @@ const Home: NextPage = () => {
       <PagesLayout>
         <div className="w-full bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
-            <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-hover bg-opacity-30 py-2 px-4 rounded-lg">Engineering</p>
-            <h1 className="my-7 text-neutral-10 font-gilroy-bold text-5xl md:text-7xl">Hi! I&apos;m <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
-            <ParagraphText isLight>Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS</ParagraphText>
+            <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-hover bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>
+            <h1 className="my-7 text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
+            <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
-              <button className="button">Lets chat me</button>
+              <button className="button">{lang.email}</button>
             </div>
           </div>
           <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
@@ -44,7 +51,7 @@ const Home: NextPage = () => {
               <div className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
                 <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />
               </div>
-              <div className="absolute left-5 rounded-xl -top-14 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
+              <div className="absolute left-5 rounded-xl -top-10 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
                 <Image src="/images/react-logo.png" width={80} height={70} alt="react" />
               </div>
             </div>
@@ -59,11 +66,11 @@ const Home: NextPage = () => {
 
         <div className="w-full bg-neutral-10 px-6 md:px-24 py-24 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-1/2">
-            <HeadingText>About my background.</HeadingText>
+            <HeadingText>{lang.background}</HeadingText>
           </div>
           <div className="w-full mt-5 md:mt-0 md:w-1/2 flex flex-col space-y-3">
-            <ParagraphText>Since high school I have learned the basics of website programming, even though I majored in computer and network engineering at that time. but Im curious about the website, there I decided to explore more about HTML CSS JS</ParagraphText>
-            <ParagraphText>and when i graduated from Vocational High School, i tried to continue to pursue that field, i tried to find a university that has a focus on information technology</ParagraphText>
+            <ParagraphText>{lang.descriptionBackground1}</ParagraphText>
+            <ParagraphText>{lang.descriptionBackground2}</ParagraphText>
           </div>
         </div>
 
@@ -72,15 +79,15 @@ const Home: NextPage = () => {
             <Image src="/images/chair.webp" className="rounded-3xl" width={480} height={550} alt="chair" objectFit="cover" />
           </div>
           <div className="w-full md:w-1/2 mt-10 md:mt-0">
-            <HeadingText>First Journey Experience.</HeadingText>
-            <ParagraphText className="mt-5">First time focusing on the frontend world because of the interest in making a website that looks neat, interactive and good in terms of visuals.</ParagraphText>
-            <ParagraphText className="mt-5">The first time I became a frontend was when there was a national event called 1000 digital startups, where I participated from the initial phase of seminars, workshops, hacksprints and bootcamps. There I was taught to form a team consisting of at least 3 stakeholders such as hustler (business), hipster (design) and hacker (engineer). I was handling it as a ui ux designer and also a frontend. There I learned a lot and I think thats where my journey begins</ParagraphText>
+            <HeadingText>{lang.journey}</HeadingText>
+            <ParagraphText className="mt-5">{lang.descriptionJourney1}</ParagraphText>
+            <ParagraphText className="mt-5">{lang.descriptionJourney2}</ParagraphText>
           </div>
         </div>
 
         <div className="w-full bg-primary-pressed px-6 mt-16 md:mt-0 md:px-24 py-24 flex flex-col md:flex-row justify-between">
           <div className="w-full md:w-1/2">
-            <HeadingText isLight className="text-center md:text-left">My Favourite Technology.</HeadingText>
+            <HeadingText isLight className="text-center md:text-left">{lang.technology}</HeadingText>
           </div>
           <div className="w-full md:w-1/2 mt-10 md:mt-0 grid grid-cols-4 gap-5 items-center">
             {TechList.map((item: any) => (
@@ -89,8 +96,8 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="w-full px-6 md:px-24 py-24">
-          <HeadingText className="text-center">My Recent Project.</HeadingText>
-          <ParagraphText className="text-center mt-5">This is my recent project three month ago</ParagraphText>
+          <HeadingText className="text-center">{lang.recentProject}</HeadingText>
+          <ParagraphText className="text-center mt-5">{lang.descriptionRecentProject}</ParagraphText>
           <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-6 mt-8">
             {RecentProject.map((item: any) => (
               <ProjectCard key={item.id} id={item.id} fileImage={item.fileImage} title={item.title} description={item.description} />

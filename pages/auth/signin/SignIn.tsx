@@ -28,7 +28,7 @@ const SignIn: NextPage = () => {
             .email("Invalid Email Address")
             .required("Field Email Required"),
         password: Yup.string()
-            .min(3, "Password must be more than 3 character")
+            .min(8, "Password must be more than 8 character")
             .required("Field Password Required")
     })
 

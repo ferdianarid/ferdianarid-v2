@@ -4,8 +4,15 @@ import PagesLayout from "@layouts/PagesLayout"
 import { PageText, ParagraphText } from "@components/atoms/Text"
 import { DataExperience } from "apps/data/experience"
 import ExperienceCard from "@components/organism/Cards/ExperienceCard"
+import id from "@locales/id"
+import en from "@locales/en"
+import { useRouter } from "next/router"
 
 const Experience = () => {
+    const router = useRouter()
+    const { locale } = router
+
+    const lang = locale === "id" ? id : en
     return (
         <Fragment>
             <Head>
@@ -20,8 +27,8 @@ const Experience = () => {
                 <div className="w-full bg-primary-pressed py-10 px-6 md:px-24">
                     <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
                         <div className="">
-                            <PageText isLight>Experience.</PageText>
-                            <ParagraphText>This is my Work Experience that you can view</ParagraphText>
+                            <PageText isLight>{lang.headerExperience}</PageText>
+                            <ParagraphText>{lang.subheaderExperience}</ParagraphText>
                         </div>
                     </div>
                     <div className="w-full">
