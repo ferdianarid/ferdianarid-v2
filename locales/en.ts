@@ -20,6 +20,7 @@ export default {
     navigationPosts: "Posts",
     navigationExperience: "Experience",
     navigationService: "Services",
+    navigationAccount: "Account",
     signInButton: "Sign In",
     signUpButton: "Sign Up",
     selectLang: "Language",
@@ -40,5 +41,9 @@ export default {
     // All Post Route Category
     allPostRoute: "posts",
     webDevRoute: "web-development",
-    productDesignRoute: "product-design"
+    productDesignRoute: "product-design",
+    // Account Page
+    headerAccount: "My Account",
+    subheaderAccount: "My personal account",
+    logoutButton: "Logout Account"
 }

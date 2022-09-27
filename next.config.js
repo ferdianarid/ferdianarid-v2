@@ -15,7 +15,7 @@ const nextConfig = {
     swcMinify: true,
     reactStrictMode: true,
     images: {
-        domains: ["tailwindui.com", "imdb-api.com", "m.media-amazon.com", "i.gr-assets.com", "s0.bukalapak.com", "placeimg.com", "pragprog.com", "ui-avatars.com", "flagcdn.com", "cdn-images-1.medium.com"],
+        domains: ["tailwindui.com", "lh3.googleusercontent.com", "imdb-api.com", "m.media-amazon.com", "i.gr-assets.com", "s0.bukalapak.com", "placeimg.com", "pragprog.com", "ui-avatars.com", "flagcdn.com", "cdn-images-1.medium.com"],
         dangerouslyAllowSVG: true,
         contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     },
