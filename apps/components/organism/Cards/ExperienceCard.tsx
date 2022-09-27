@@ -14,7 +14,7 @@ const ExperienceCard = (props: IExperience) => {
                 </div>
                 <div className="md:col-span-8">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
-                        <h1 className="font-gilroy-bold text-3xl text-white">{position}</h1>
+                        <h1 className="font-gilroy-bold text-3xl text-primary-pressed dark:text-white">{position}</h1>
                         <h1 className="font-gilroy-normal text-xs md:text-sm text-semantic-warning-main">{startDate} - {endDate}</h1>
                     </div>
                     <h1 className="font-gilroy-bold text-lg text-semantic-warning-main mt-4 md:mt-2">{company} <MonthBadge>{duration} Month</MonthBadge></h1>
