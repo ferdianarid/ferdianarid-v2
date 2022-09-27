@@ -20,6 +20,7 @@ export default {
     navigationPosts: "Artikel",
     navigationExperience: "Pengalaman",
     navigationService: "Layanan",
+    navigationAccount: "Akun",
     signInButton: "Masuk",
     signUpButton: "Daftar",
     selectLang: "Bahasa",
@@ -40,5 +41,9 @@ export default {
     // All Post Route Category
     allPostRoute: "id/posts",
     webDevRoute: "id/web-development",
-    productDesignRoute: "id/product-design"
+    productDesignRoute: "id/product-design",
+    // Account Page
+    headerAccount: "Akun Saya",
+    subheaderAccount: "Akun pribadi saya",
+    logoutButton: "Keluar Akun"
 }

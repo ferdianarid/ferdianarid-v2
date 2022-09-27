@@ -51,6 +51,11 @@ const Navbar = () => {
                       {lang.navigationService}
                     </motion.p>
                   </Link>
+                  <Link href="/account">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                      {lang.navigationAccount}
+                    </motion.p>
+                  </Link>
                   {/* Select Language */}
                   <select
                     onChange={changeLanguage}
@@ -60,13 +65,9 @@ const Navbar = () => {
                       <option
                         key={item.id}
                         value={item.value}
-                        className="font-gilroy-medium text-primary-pressed text-sm hover:cursor-pointer py-3 transition duration-150 ease-in-out hover:bg-primary-hover flex items-center focus:outline-none hover:text-neutral-10"
+                        className="py-2 font-gilroy-medium text-primary-pressed text-sm hover:cursor-pointer  transition duration-150 ease-in-out hover:bg-primary-hover flex items-center focus:outline-none hover:text-neutral-10"
                       >
-                        {/* <div className="flex items-center space-x-2 w-fit"> */}
-                        <p className="text-sm font-gilroy-medium py-2">
-                          {item.name}
-                        </p>
-                        {/* </div> */}
+                        {item.name}
                       </option>
                     ))}
                   </select>
@@ -136,6 +137,11 @@ const Navbar = () => {
                       {lang.navigationService}
                     </motion.p>
                   </Link>
+                  <Link href="/account">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                      {lang.navigationAccount}
+                    </motion.p>
+                  </Link>
                   {/* Select Language */}
                   <select
                     onChange={changeLanguage}
@@ -169,7 +175,7 @@ const Navbar = () => {
           </Transition>
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }
 
