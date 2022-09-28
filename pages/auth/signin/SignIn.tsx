@@ -71,7 +71,7 @@ const SignIn: NextPage = () => {
                         <Formik initialValues={initialValues} validationSchema={schemaValidations} onSubmit={SignIn}>
                             <Form>
                                 <div className="mt-4">
-                                    <p className="text-sm font-gilroy-medium text-primary-pressed dark:text-neutral-10">Email Address <span className="text-semantic-danger-main">*</span></p>
+                                    <label className="text-sm font-gilroy-medium text-primary-pressed dark:text-neutral-10">Email Address <span className="text-semantic-danger-main">*</span></label>
                                     <Field className="text-md bg-slate-100 dark:bg-primary-hover text-primary-pressed dark:text-neutral-10 dark:focus:bg-primary-pressed focus:bg-neutral-10 border-none mt-2 py-3 px-4 rounded-lg w-full focus:outline-none focus:border-2 focus:outline-semantic-warning-main" type="email" name="email" id="email" placeholder="Email Address" />
                                     <ErrorMessage name="email" component={ErrorText} />
                                 </div>

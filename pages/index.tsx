@@ -2,13 +2,13 @@ import { Fragment } from "react"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
-import { statistics } from "apps/data/statistics"
-import { RecentProject } from "apps/data/recentProject"
+import { statistics } from "@data/statistics"
+import { RecentProject } from "@data/recentProject"
 import PagesLayout from "@layouts/PagesLayout"
 import Stats from "@components/moleculs/Stats"
 import ProjectCard from "@components/organism/Cards/ProjectCard"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
-import { TechList } from "apps/data/data"
+import { TechList } from "@data/data"
 import TechIcon from "@components/atoms/Images/TechIcon"
 import { useRouter } from "next/router"
 import en from "@locales/en"
@@ -33,10 +33,10 @@ const Home: NextPage = () => {
         <div className="w-full bg-neutral-10 dark:bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
             <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-pressed dark:bg-primary-hover dark:bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>
-            <h1 className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
+            <h1 data-testid="heading" className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
             <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
             <div className="mt-10 md:mt-20 flex items-center space-x-3">
-              <button className="button">{lang.email}</button>
+              <button name="cta-button" className="button">{lang.email}</button>
             </div>
           </div>
           <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">

@@ -1,4 +1,4 @@
-import type { AppProps } from "next/app"
+import type { AppProps, NextWebVitalsMetric } from "next/app"
 import { Fragment, useEffect } from "react"
 import NProgress from "nprogress"
 import { useRouter } from "next/router"
@@ -33,10 +33,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* <Script
             type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700017.js"
         /> */}
-        <Toaster position="top-right" />
+      <Toaster position="top-right" />
       <Component {...pageProps} />
     </Fragment>
   )
+}
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  console.log(metric)
 }
 
 export default MyApp
