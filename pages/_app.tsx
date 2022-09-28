@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import "@styles/globals.css"
 import "nprogress/nprogress.css"
 import { Toaster } from "react-hot-toast"
-// import Script from "next/script"
+import Script from "next/script"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -30,9 +30,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router])
   return (
     <Fragment>
-      {/* <Script
-            type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700017.js"
-        /> */}
+      <Script
+        type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700017.js"
+      />
       <Toaster position="top-right" />
       <Component {...pageProps} />
     </Fragment>
