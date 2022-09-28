@@ -6,7 +6,9 @@ const PagesLayout = ({ children }: any) => {
   return (
     <Fragment>
       <Navbar />
-      {children}
+      <div className="max-w-[1440px] mx-auto">
+        {children}
+      </div>
       <Footer />
     </Fragment>
   )
