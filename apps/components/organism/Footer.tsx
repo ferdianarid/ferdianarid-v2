@@ -5,7 +5,7 @@ import Feedback from "@components/atoms/Field/Feedback"
 const Footer = () => {
     return (
         <Fragment>
-            <div className="w-full px-6 md:px-24 py-24 bg-neutral-20 dark:bg-primary-pressed">
+            <div className="w-full max-w-[1440px] mx-auto px-6 md:px-24 py-24 bg-neutral-20 dark:bg-primary-pressed">
                 <div className="grid grid-cols-2 gap-y-10 md:grid-cols-5 md:gap-5">
                     <div className="col-span-2">
                         <h1 data-testid="footerHeading" className="font-gilroy-bold text-3xl text-primary-pressed dark:text-neutral-10">Portfolio.</h1>
