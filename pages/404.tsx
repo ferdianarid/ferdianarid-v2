@@ -10,7 +10,7 @@ type Props = {
     statusCode?: number
 }
 
-const Error: NextPage<Props> = ({ statusCode }) => {
+const NotFound: NextPage<Props> = ({ statusCode = 404 }) => {
     return (
         <Fragment>
             <Head>
@@ -38,9 +38,4 @@ const Error: NextPage<Props> = ({ statusCode }) => {
     )
 }
 
-Error.getInitialProps = ({ res, err }) => {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : 404
-    return { statusCode }
-}
-
-export default Error
+export default NotFound
