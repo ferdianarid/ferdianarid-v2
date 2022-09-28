@@ -1,6 +1,5 @@
 import { Fragment } from "react"
 import type { NextPage } from "next"
-import Head from "next/head"
 import Image from "next/image"
 import { statistics } from "@data/statistics"
 import { RecentProject } from "@data/recentProject"
@@ -13,6 +12,7 @@ import TechIcon from "@components/atoms/Images/TechIcon"
 import { useRouter } from "next/router"
 import en from "@locales/en"
 import id from "@locales/id"
+import { Meta } from "@modules/Meta"
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -21,14 +21,7 @@ const Home: NextPage = () => {
   const lang = locale === "id" ? id : en
   return (
     <Fragment>
-      <Head>
-        <title>Ferdian - Frontend Engineer</title>
-        <meta httpEquiv="X-UA-Compatible" content="IE-Edge, chrome" />
-        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
-        <meta name="description" content="Ferdian portfolio" />
-        <meta name="keywords" content="Ferdian Portfolio Frontend" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+      <Meta title="Homepage" />
       <PagesLayout>
         <div className="w-full bg-neutral-10 dark:bg-primary-pressed px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2">
