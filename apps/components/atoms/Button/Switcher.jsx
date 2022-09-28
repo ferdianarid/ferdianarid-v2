@@ -12,6 +12,7 @@ const Switcher = () => {
     return (
         <Fragment>
             <DarkModeSwitch
+                data-testid="switcher"
                 className={colorTheme === "light" ? "bg-primary-pressed" : "bg-neutral-10"}
                 checked={darkSide}
                 onChange={toggleDarkMode}
