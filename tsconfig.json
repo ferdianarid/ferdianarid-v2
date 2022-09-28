@@ -3,39 +3,42 @@
     "target": "es5",
     "baseUrl": "./",
     "paths": {
-        "@pages/*": [
-          "pages/*"
-        ],
-        "@firebase/*": [
-          "firebase/*"
-        ],
-        "@locales/*": [
-          "locales/*"
-        ],
-        "@animation/*": [
-          "apps/animation/*"
-        ],
-        "@components/*": [
-          "apps/components/*"
-        ],
-        "@modules/*": [
-          "apps/modules/*"
-        ],
-        "@specs/*": [
-          "apps/specs/*"
-        ],
-        "@styles/*": [
-          "apps/styles/*"
-        ],
-        "@layouts/*": [
-          "apps/layouts/*"
-        ],
-        "@hooks/*": [
-          "apps/hooks/*"
-        ],
-        "@interfaces/*": [
-          "apps/interfaces/*"
-        ]
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@data/*": [
+        "apps/data/*"
+      ],
+      "@firebase/*": [
+        "firebase/*"
+      ],
+      "@locales/*": [
+        "locales/*"
+      ],
+      "@animation/*": [
+        "apps/animation/*"
+      ],
+      "@components/*": [
+        "apps/components/*"
+      ],
+      "@modules/*": [
+        "apps/modules/*"
+      ],
+      "@specs/*": [
+        "apps/specs/*"
+      ],
+      "@styles/*": [
+        "apps/styles/*"
+      ],
+      "@layouts/*": [
+        "apps/layouts/*"
+      ],
+      "@hooks/*": [
+        "apps/hooks/*"
+      ],
+      "@interfaces/*": [
+        "apps/interfaces/*"
+      ]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -51,6 +54,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "apps/components/atoms/Button/Switcher.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "apps/components/atoms/Button/Switcher.jsx", "apps/specs/unit/home.test.js", "apps/specs/unit/feedback.test.jsx", "apps/specs/unit/feedback.test.jsx"],
   "exclude": ["node_modules"]
 }

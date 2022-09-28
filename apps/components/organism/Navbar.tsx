@@ -6,7 +6,7 @@ import PostsCategory from "./Popover/PostsCategory"
 import { useRouter } from "next/router"
 import en from "@locales/en"
 import id from "@locales/id"
-import { LanguageList } from "apps/data/data"
+import { LanguageList } from "@data/data"
 import Switcher from "@components/atoms/Button/Switcher"
 
 const Navbar = () => {
@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="w-full flex items-center justify-between">
             <Link href="/">
               <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
-                <h1 className="font-gilroy-bold text-2xl text-primary-pressed dark:text-neutral-10">{lang.brandPortfolio}</h1>
+                <h1 data-test-id="brand" className="font-gilroy-bold text-2xl text-primary-pressed dark:text-neutral-10">{lang.brandPortfolio}</h1>
                 <p className="text-xs text-primary-pressed dark:text-neutral-10 font-gilroy-normal">Frontend Developer</p>
               </motion.div>
             </Link>
