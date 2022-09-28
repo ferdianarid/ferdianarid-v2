@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import { ParagraphText } from "@components/atoms/Text"
+import Feedback from "@components/atoms/Field/Feedback"
 
 const Footer = () => {
     return (
@@ -29,14 +30,7 @@ const Footer = () => {
                             <ParagraphText>Instagram</ParagraphText>
                         </div>
                     </div>
-                    <div className="">
-                        <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Feedback</h1>
-                        <div className="mt-5">
-                            <ParagraphText>Give me a feedback for make this web more better</ParagraphText>
-                            <input type="text" name="feedback" id="feedback" placeholder="Type a feedback" className="mt-4 rounded-lg text-md focus:outline-semantic-warning-main border-none py-2 px-4 w-full" />
-                            <button className="py-2 px-4 rounded-lg bg-semantic-warning-main text-neutral-10 text-md mt-3 font-gilroy-semibold">Submit</button>
-                        </div>
-                    </div>
+                    <Feedback />
                 </div>
             </div>
         </Fragment>
