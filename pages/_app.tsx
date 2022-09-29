@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Script
-        type="text/javascript" id="hs-script-loader" async defer src={process.env.NEXT_PUBLIC_HUBSPOT_CHAT_CREDENTIALS}
+        type="text/javascript" id="hs-script-loader" async defer src={`//js.hs-scripts.com/${process.env.NEXT_PUBLIC_HUBSPOT_CHAT_CREDENTIALS}.js`}
       />
       <Toaster position="top-right" />
       <Component {...pageProps} />
