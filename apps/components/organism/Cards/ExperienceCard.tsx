@@ -1,10 +1,10 @@
-import { Fragment } from "react"
+import React, { Fragment } from "react"
 import Image from "next/image"
 import { ParagraphText } from "@components/atoms/Text"
 import { MonthBadge } from "@components/atoms/Badge"
 import { IExperience } from "@interfaces/index"
 
-const ExperienceCard = (props: IExperience) => {
+const ExperienceCard: React.FC<IExperience> = (props: IExperience) => {
     const { position, image, startDate, endDate, company, duration, workStatus, location, description } = props
     return (
         <Fragment>

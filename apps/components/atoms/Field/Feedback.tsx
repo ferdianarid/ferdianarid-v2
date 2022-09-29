@@ -1,7 +1,7 @@
-import { Fragment, useRef } from "react"
+import React, { Fragment, useRef } from "react"
 import { ParagraphText } from "../Text"
 
-const Feedback = () => {
+const Feedback: React.FC = () => {
     const feedFieldReff = useRef<HTMLInputElement>(null)
 
     const feedbackHandler = (feed: any) => {

@@ -3,7 +3,7 @@ import Image from "next/image"
 import { ContentHeading } from "@components/atoms/Text"
 import { FaCalendarDay } from "react-icons/fa"
 
-const CardHeader = () => {
+const CardHeader: React.FC = () => {
     return (
         <React.Fragment>
             <div className="w-full mb-5">

@@ -1,11 +1,11 @@
 import type { AppProps, NextWebVitalsMetric } from "next/app"
-import { Fragment, useEffect } from "react"
-import NProgress from "nprogress"
 import { useRouter } from "next/router"
-import "@styles/globals.css"
-import "nprogress/nprogress.css"
-import { Toaster } from "react-hot-toast"
 import Script from "next/script"
+import { Fragment, useEffect } from "react"
+import { Toaster } from "react-hot-toast"
+import NProgress from "nprogress"
+import "nprogress/nprogress.css"
+import "@styles/globals.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Script
-        type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22700017.js"
+        type="text/javascript" id="hs-script-loader" async defer src={process.env.NEXT_PUBLIC_HUBSPOT_CHAT_CREDENTIALS}
       />
       <Toaster position="top-right" />
       <Component {...pageProps} />

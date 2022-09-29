@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react"
+import React, { SetStateAction, useState } from "react"
 import Link from "next/link"
 import { Transition } from "@headlessui/react"
 import { motion } from "framer-motion"
@@ -9,7 +9,7 @@ import id from "@locales/id"
 import { LanguageList } from "@data/data"
 import Switcher from "@components/atoms/Button/Switcher"
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
 
   const router = useRouter()

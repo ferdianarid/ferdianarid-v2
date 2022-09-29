@@ -1,9 +1,5 @@
 import { Fragment } from "react"
-
-interface IStats {
-  count: number | string
-  title: string
-}
+import { IStats } from "@interfaces/index"
 
 const Stats: React.FC<IStats> = ({ count, title }) => {
   return (

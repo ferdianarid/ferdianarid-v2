@@ -8,7 +8,7 @@ import { useRouter } from "next/router"
 import id from "locales/id"
 import en from "locales/en"
 
-const Language = () => {
+const Language: React.FC = () => {
     const router = useRouter()
     const { locale } = router
 

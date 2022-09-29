@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export interface IStatistics {
     id: number
     count: number | string
@@ -24,4 +26,23 @@ export interface IExperience {
     workStatus: string
     location: string
     description: string | any
+}
+
+export interface IPostCard {
+    imagePath: string
+    postId: string
+    title: string
+    description: string
+    category: string
+}
+
+export interface IStats {
+    count: number | string
+    title: string
+}
+
+export interface ITextProps {
+    children: ReactNode | string,
+    isLight?: boolean,
+    className?: string
 }

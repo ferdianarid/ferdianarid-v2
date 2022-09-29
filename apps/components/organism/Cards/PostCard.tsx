@@ -2,14 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { FaStar } from "react-icons/fa"
-
-interface IPostCard {
-    imagePath: string
-    postId: string
-    title: string
-    description: string
-    category: string
-}
+import { IPostCard } from "@interfaces/index"
 
 const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, category }) => {
     return (

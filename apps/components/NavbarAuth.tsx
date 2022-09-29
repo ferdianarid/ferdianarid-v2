@@ -1,8 +1,9 @@
+import React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Switcher from "./atoms/Button/Switcher"
 
-const NavbarAuth = () => {
+const NavbarAuth: React.FC = () => {
     return (
         <nav className="bg-neutral-10 dark:bg-primary-pressed">
             <div data-testid="navbarAuth" className="w-full max-w-[1440px] mx-auto px-5 py-8 md:px-24">

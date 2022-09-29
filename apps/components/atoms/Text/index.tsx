@@ -1,11 +1,5 @@
-import { ReactNode } from "react"
 import clsx from "clsx"
-
-interface ITextProps {
-    children: ReactNode | string,
-    isLight?: boolean,
-    className?: string
-}
+import { ITextProps } from "@interfaces/index"
 
 export const HeadingText: React.FC<ITextProps> = ({ children, isLight, className }) => {
     return <h1 className={clsx(
