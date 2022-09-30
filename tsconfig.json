@@ -54,6 +54,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "apps/components/atoms/Button/Switcher.jsx", "apps/specs/unit/home.test.js", "apps/specs/unit/feedback.test.jsx", "apps/specs/unit/feedback.test.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "apps/components/atoms/Button/Switcher.jsx", "apps/specs/unit/home.test.js", "apps/specs/unit/feedback.test.jsx", "apps/specs/unit/feedback.test.jsx", "pages/test.jsx"],
   "exclude": ["node_modules"]
 }
