@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://ferdianarid.com/</loc>
+  <lastmod>2022-10-23T04:53:05+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://ferdianarid.com/experience</loc>
+  <lastmod>2022-10-23T04:59:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://ferdianarid.com/projects</loc>
+  <lastmod>2022-10-23T05:01:22+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://ferdianarid.com/posts</loc>
+  <lastmod>2022-10-23T05:03:15+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+
+</urlset>
