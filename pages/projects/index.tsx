@@ -44,7 +44,7 @@ const Projects: NextPage = ({ project }: any) => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
                             {project.map((item: any) => (
-                                <ProjectCard liveBadge projectId={item.id} isLight key={item.id} projectUrl={item.projectUrl} fileImage={item.frontMatter.imageUrl} title={item.frontMatter.name} description={item.frontMatter.description} />
+                                <ProjectCard liveBadge projectId={item.projectId} isLight key={item.id} projectUrl={item.projectUrl} fileImage={item.frontMatter.imageUrl} title={item.frontMatter.name} description={item.frontMatter.description} />
                             ))}
                         </div>
                     </div>
