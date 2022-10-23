@@ -7,12 +7,14 @@ export interface IStatistics {
 }
 
 export interface IRecentProject {
-    id: number
+    id?: number
     fileImage: string
     title: string
     description: string
     isLight?: boolean
     liveBadge?: boolean
+    projectId?: string | any
+    projectUrl?: string
 }
 
 export interface IExperience {

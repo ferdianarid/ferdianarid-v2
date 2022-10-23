@@ -1,16 +1,18 @@
-import { Fragment, useRef } from "react"
+import * as fs from "fs"
+import path from "path"
 import { NextPage } from "next"
 import { useRouter } from "next/router"
+import matter from "gray-matter"
+import { Fragment, useRef } from "react"
+import { FaSearch } from "react-icons/fa"
+import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import { PageText, ParagraphText } from "@components/atoms/Text"
-import { AllProject } from "apps/data/recentProject"
 import ProjectCard from "@components/organism/Cards/ProjectCard"
-import { FaSearch } from "react-icons/fa"
 import id from "@locales/id"
 import en from "@locales/en"
-import { Meta } from "@modules/Meta"
 
-const Projects: NextPage = () => {
+const Projects: NextPage = ({ project }: any) => {
     const queryRefs = useRef<HTMLInputElement>(null)
 
     const router = useRouter()
@@ -41,8 +43,8 @@ const Projects: NextPage = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
-                            {AllProject.map((item: any) => (
-                                <ProjectCard liveBadge isLight key={item.id} id={item.id} fileImage={item.fileImage} title={item.title} description={item.description} />
+                            {project.map((item: any) => (
+                                <ProjectCard liveBadge projectId={item.id} isLight key={item.id} projectUrl={item.projectUrl} fileImage={item.frontMatter.imageUrl} title={item.frontMatter.name} description={item.frontMatter.description} />
                             ))}
                         </div>
                     </div>
@@ -50,6 +52,29 @@ const Projects: NextPage = () => {
             </PagesLayout>
         </Fragment>
     )
+}
+
+export async function getStaticProps() {
+    const files = fs.readdirSync(path.join("apps", "data", "projects"))
+
+    const project = files.map((filename: any) => {
+        const markdownWithMeta = fs.readFileSync(path.join("apps", "data", "projects", filename))
+
+        const { data: frontMatter } = matter(markdownWithMeta)
+
+        const projectId = filename.split(".")[0]
+
+        return {
+            frontMatter,
+            projectId
+        }
+    })
+
+    return {
+        props: {
+            project
+        }
+    }
 }
 
 export default Projects

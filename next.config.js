@@ -22,9 +22,9 @@ const nextConfig = {
     // example rewrites url when path is matching
     async rewrites() {
         return [{
-            source: "/posts/",
-            destination: "/posts?results-all"
-        }, ]
+            source: "/halisoft/",
+            destination: "https://halisoft.com"
+        }]
     },
     reactStrictMode: true,
     pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],

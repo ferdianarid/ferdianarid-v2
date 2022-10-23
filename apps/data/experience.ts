@@ -1,13 +1,13 @@
 import { IExperience } from "@interfaces/index"
 
-export const DataExperience: IExperience[] = [ {
+export const DataExperience: IExperience[] = [{
     id: 5,
     position: "Frontend Engineer",
     image: "smeshub.png",
     startDate: "April 2022",
-    endDate: "Present",
+    endDate: "October 2022",
     company: "Smeshub Indonesia",
-    duration: 6,
+    duration: 7,
     workStatus: "Freelance",
     location: "Jakarta",
     description: [

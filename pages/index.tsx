@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <Fragment>
       <Meta title="Homepage" />
       <PagesLayout>
-        <div className="w-full bg-neutral-10 dark:bg-primary-pressed">
+        <div className="w-full bg-neutral-10 dark:bg-primary-pressed pt-20">
           <div className="max-w-[1440px] mx-auto px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2">
               <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-pressed dark:bg-primary-hover dark:bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>

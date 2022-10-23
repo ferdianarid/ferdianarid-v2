@@ -6,8 +6,8 @@ export const TechList = [
 ]
 
 export const LanguageList = [
-    { id: 1, flags: "indonesia", name: "Indonesia", value: "id" },
-    { id: 2, flags: "english", name: "English", value: "en" },
+    { id: 1, flags: "english", name: "English", value: "en" },
+    { id: 2, flags: "indonesia", name: "Indonesia", value: "id" },
     // { id: 3, flags: "germany", name: "Deutch", value: "de" },
     // { id: 5, flags: "netherlands", name: "Netherland" },
     // { id: 6, flags: "france", name: "France" },
