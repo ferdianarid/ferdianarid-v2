@@ -31,7 +31,7 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
         isLight ? "p-5" : "p-5",
         isLight ? "" : "bg-neutral-10"
       )}>
-        <Image src={`/images/projects/${fileImage}.png`} className="object-cover rounded-2xl" width={800} height={400} alt={fileImage} />
+        <Image src={`/images/projects/${fileImage}.png`} className="object-cover rounded-2xl" width={800} height={450} alt={fileImage} />
         <div className="pt-4">
           <div className="flex items-center justify-between">
             <h3 className={clsx(
