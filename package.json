@@ -35,6 +35,7 @@
         "react-toggle-dark-mode": "^1.1.0",
         "rehype-highlight": "^5.0.2",
         "remark-frontmatter": "^4.0.1",
+        "swiper": "^8.4.4",
         "yup": "^0.32.11"
     },
     "devDependencies": {

@@ -6,11 +6,10 @@ import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import { TechList } from "@data/data"
 import { statistics } from "@data/statistics"
-import { RecentProject } from "@data/recentProject"
 import Stats from "@components/moleculs/Stats"
 import TechIcon from "@components/atoms/Images/TechIcon"
-import ProjectCard from "@components/organism/Cards/ProjectCard"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
+import ProjectCarousel from "@components/templates/ProjectCarousel"
 import en from "@locales/en"
 import id from "@locales/id"
 
@@ -21,7 +20,7 @@ const Home: NextPage = () => {
   const lang = locale === "id" ? id : en
   return (
     <Fragment>
-      <Meta title="Homepage" />
+      <Meta title="Ferdian Ahmad R" />
       <PagesLayout>
         <div className="w-full bg-neutral-10 dark:bg-primary-pressed pt-6 md:pt-10">
           <div className="max-w-[1440px] mx-auto px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
@@ -101,16 +100,12 @@ const Home: NextPage = () => {
         <div className="w-full">
           <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-24">
             <HeadingText className="text-center">{lang.recentProject}</HeadingText>
-            <ParagraphText className="text-center mt-5">{lang.descriptionRecentProject}</ParagraphText>
-            <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-6 mt-8">
-              {RecentProject.map((item: any) => (
-                <ProjectCard key={item.id} id={item.id} fileImage={item.fileImage} title={item.title} description={item.description} />
-              ))}
-            </div>
+            <ParagraphText className="text-center mt-5 mb-6">{lang.descriptionRecentProject}</ParagraphText>
+            <ProjectCarousel />
           </div>
         </div>
         <div className="w-full bg-neutral-20 dark:bg-primary-pressed md:h-[350px] md:-mt-[300px]"></div>
-        <div className="w-full bg-neutral-10 h-[400px]"></div>
+        <div className="w-full"></div>
       </PagesLayout>
     </Fragment>
   )
