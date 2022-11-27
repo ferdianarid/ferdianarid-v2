@@ -27,10 +27,10 @@ const PostsCategory = ({ textColors }: any) => {
                             className="flex items-center focus:outline-none text-headline-7 text-primary-border font-gilroy-normal"
                         >
                             {/* eslint-disable-next-line quotes */}
-                            <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer`}>
+                            <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer`}>
                                 {lang.navigationPosts}
                                 {open ? <FaChevronUp /> : <FaChevronDown />}
-                            </motion.a>
+                            </motion.p>
                         </Popover.Button>
                         <Transition
                             as={Fragment}
@@ -46,11 +46,11 @@ const PostsCategory = ({ textColors }: any) => {
                                     <div className="relative grid gap-2 bg-white py-2 grid-cols-1">
                                         {CategoryList.map((item) => (
                                             <Link key={item.id} href={item.pathUrl}>
-                                                <a
+                                                <p
                                                     className="text-primary-main font-gilroy-medium  text-sm hover:cursor-pointer py-2 px-3 transition duration-150 ease-in-out hover:bg-primary-hover focus:outline-none hover:text-neutral-10"
                                                 >
                                                     {item.title}
-                                                </a>
+                                                </p>
                                             </Link>
                                         ))}
                                     </div>
