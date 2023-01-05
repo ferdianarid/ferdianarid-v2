@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import type { NextPage } from "next"
+import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import { Meta } from "@modules/Meta"
@@ -29,7 +30,9 @@ const Home: NextPage = () => {
               <h1 data-testid="heading" className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
               <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
               <div className="mt-10 md:mt-20 flex items-center space-x-3">
-                <button name="cta-button" className="button">{lang.email}</button>
+                <Link href="mailto:ferdianahmadrozikin018@gmail.com">
+                  <button name="cta-button" className="button">{lang.email}</button>
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
