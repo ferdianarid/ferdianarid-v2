@@ -8,7 +8,7 @@ export const DataExperience: IExperience[] = [
         startDate: "June 2022",
         endDate: "Present",
         company: "Dipa Inhouse",
-        duration: 7,
+        duration: 8,
         workStatus: "Full Time",
         location: "Malang",
         description: [
