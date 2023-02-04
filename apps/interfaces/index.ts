@@ -14,7 +14,7 @@ export interface IRecentProject {
     isLight?: boolean
     liveBadge?: boolean
     projectId?: string | any
-    projectUrl?: string
+    projectUrl?: string | any
 }
 
 export interface IExperience {

@@ -10,7 +10,7 @@ import { useRouter } from "next/router"
 import id from "@locales/id"
 import en from "@locales/en"
 
-const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight, liveBadge, projectId }) => {
+const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight, liveBadge, projectId, projectUrl }) => {
   const router = useRouter()
   const { locale } = router
   const lang = locale === "id" ? id : en
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
 
   return (
     <Fragment>
-      <ConfirmModal showModal={open} onClose={closeModal} />
+      <ConfirmModal projectUrls={projectUrl} showModal={open} onClose={closeModal} />
       <div className={clsx(
         "w-full h-full relative",
         "shadow-lg shadow-slate-100 dark:shadow-none",

@@ -27,10 +27,10 @@ const PostsCategory = ({ textColors }: any) => {
                             className="flex items-center focus:outline-none text-headline-7 text-primary-border font-gilroy-normal"
                         >
                             {/* eslint-disable-next-line quotes */}
-                            <motion.a initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer`}>
+                            <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: .6 }} className={`${textColors} flex items-center gap-x-2 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer`}>
                                 {lang.navigationPosts}
                                 {open ? <FaChevronUp /> : <FaChevronDown />}
-                            </motion.a>
+                            </motion.p>
                         </Popover.Button>
                         <Transition
                             as={Fragment}

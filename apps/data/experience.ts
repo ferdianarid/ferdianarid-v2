@@ -1,6 +1,19 @@
 import { IExperience } from "@interfaces/index"
 
 export const DataExperience: IExperience[] = [{
+    id: 6,
+    position: "Frontend Engineer",
+    image: "dipainhouse.jpg",
+    startDate: "June 2022",
+    endDate: "Present",
+    company: "Dipa Inhouse",
+    duration: 9,
+    workStatus: "Full Time",
+    location: "Malang",
+    description: [
+        "Create and build company and client websites with any services, such as web company profile, web recruitment, product service, complete with integration api, third party library like HubSpot, emailjs and MailChimp and also create schema form validation. added animation with framer motion and gsap. built with both CSR and SSR mechanism. Optimize image and component for better user experience"
+    ]
+}, {
     id: 5,
     position: "Frontend Engineer",
     image: "smeshub.png",

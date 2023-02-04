@@ -10,7 +10,7 @@ const ExperienceCard: React.FC<IExperience> = (props: IExperience) => {
         <Fragment>
             <div className="mt-10 grid gap-x-5 md:grid-cols-9 grid-cols-1">
                 <div className="relative mb-5 md:mb-0 md:col-span-1 md:w-full w-24 h-24">
-                    <Image src={`/images/experience/${image}`} layout="fill" alt={image} />
+                    <Image src={`/images/experience/${image}`} className="rounded-xl" layout="fill" alt={image} />
                 </div>
                 <div className="md:col-span-8">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between">

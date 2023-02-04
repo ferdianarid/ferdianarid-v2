@@ -18,6 +18,10 @@ const Home: NextPage = () => {
   const { locale } = router
 
   const lang = locale === "id" ? id : en
+
+  const emailHandler = () => {
+    window.open("mailto:ferdianahmadrozikin018@gmail.com")
+  }
   return (
     <Fragment>
       <Meta title="Ferdian Ahmad R" />
@@ -29,7 +33,7 @@ const Home: NextPage = () => {
               <h1 data-testid="heading" className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
               <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
               <div className="mt-10 md:mt-20 flex items-center space-x-3">
-                <button name="cta-button" className="button">{lang.email}</button>
+                <button onClick={emailHandler} name="cta-button" className="button">{lang.email}</button>
               </div>
             </div>
             <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">
@@ -39,7 +43,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="absolute left-2 rounded-xl bottom-12 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5">
                   <h1 className="font-gilroy-bold text-xl text-primary-main">Ferdian Ahmad R</h1>
-                  <h1 className="font-gilroy-normal text-sm text-primary-main">Freelance Frontend</h1>
+                  <h1 className="font-gilroy-normal text-sm text-primary-main">Frontend Engineer</h1>
                 </div>
                 <div className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
                   <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />

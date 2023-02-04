@@ -3,15 +3,17 @@ import { Transition, Dialog } from "@headlessui/react"
 
 const ConfirmModal = ({
     showModal,
-    onClose
+    onClose,
+    projectUrls
 }: {
     showModal: boolean;
     onClose: () => void;
     modalRef?: any;
+    projectUrls: string;
 }): any => {
     const openSite = (event: SyntheticEvent) => {
         event.preventDefault()
-        window.open("https://halisoft.com")
+        window.open(projectUrls)
     }
     return (
         <Fragment>
