@@ -46,11 +46,11 @@ const PostsCategory = ({ textColors }: any) => {
                                     <div className="relative grid gap-2 bg-white py-2 grid-cols-1">
                                         {CategoryList.map((item) => (
                                             <Link key={item.id} href={item.pathUrl}>
-                                                <a
+                                                <p
                                                     className="text-primary-main font-gilroy-medium  text-sm hover:cursor-pointer py-2 px-3 transition duration-150 ease-in-out hover:bg-primary-hover focus:outline-none hover:text-neutral-10"
                                                 >
                                                     {item.title}
-                                                </a>
+                                                </p>
                                             </Link>
                                         ))}
                                     </div>
