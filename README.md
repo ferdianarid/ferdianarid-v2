@@ -2,7 +2,8 @@
 <!-- :sparkles: Mostly using React, Tailwind CSS, Redux, Formik, Strapi, Axios, GraphQL, Eslint :sparkles: -->
 <!-- :sparkles: Prefer and Interest with **Microservices** Architecture :sparkles: -->
 
-### Hi, I'm Ferdian Ahmad R 👋 ![](https://komarev.com/ghpvc/?username=ferdianarid)
+### Hi, I'm Ferdian Ahmad R 👋 !
+<!-- [](https://komarev.com/ghpvc/?username=ferdianarid) -->
 
 <!-- [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Sans&color=%23F6F703&size=18&duration=7500&lines=Let's+Explore+My+Github+Portfolio+%F0%9F%91%8B;I'm+mostly+using+JavaScript+Language+%F0%9F%8C%9F;Focused+in+Frontend+Development+%F0%9F%8E%AD;Also+Learn+Backend+Development+with+JS+%F0%9F%92%BB;Interest+about+Design+System+Component+%F0%9F%A7%A9;Always+using+Task+Management+%F0%9F%93%86;Thank+You+......+!!!+%F0%9F%91%8F%F0%9F%91%8F)](https://git.io/typing-svg) -->
 
