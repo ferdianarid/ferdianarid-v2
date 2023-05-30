@@ -2,7 +2,7 @@
 <!-- :sparkles: Mostly using React, Tailwind CSS, Redux, Formik, Strapi, Axios, GraphQL, Eslint :sparkles: -->
 <!-- :sparkles: Prefer and Interest with **Microservices** Architecture :sparkles: -->
 
-### Hi, I'm Ferdian Ahmad R 👋 ![](https://komarev.com/ghpvc/?username=ferdianar)
+### Hi, I'm Ferdian Ahmad R 👋 ![](https://komarev.com/ghpvc/?username=ferdianarid)
 
 <!-- [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Sans&color=%23F6F703&size=18&duration=7500&lines=Let's+Explore+My+Github+Portfolio+%F0%9F%91%8B;I'm+mostly+using+JavaScript+Language+%F0%9F%8C%9F;Focused+in+Frontend+Development+%F0%9F%8E%AD;Also+Learn+Backend+Development+with+JS+%F0%9F%92%BB;Interest+about+Design+System+Component+%F0%9F%A7%A9;Always+using+Task+Management+%F0%9F%93%86;Thank+You+......+!!!+%F0%9F%91%8F%F0%9F%91%8F)](https://git.io/typing-svg) -->
 
@@ -18,9 +18,9 @@
 <!-- <a href="#"><img src="https://api.daily.dev/devcards/664069b76eac4c99ae4bcc41edc056b4.png?r=mm1" width="300" alt="Ferdian Ahmad R's Dev Card"/></a> -->
 
 <p align="left">
-<a href="https://github.com/ferdianar">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=ferdianar&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ferdianar&layout=compact&langs_count=10&theme=algolia"/>
+<a href="https://github.com/ferdianarid">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=ferdianarid&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ferdianarid&layout=compact&langs_count=10&theme=algolia"/>
 </a>
 </p>
 
@@ -105,7 +105,7 @@
 ### Achievement
 [![@ferdianarid's Holopin board](https://holopin.me/ferdianarid)](https://holopin.io/@ferdianarid)
 
-<a href="https://github.com/ferdianar/github-readme-activity-graph"><img alt="Ferdian's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=ferdianar&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+<a href="https://github.com/ferdianarid/github-readme-activity-graph"><img alt="Ferdian's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=ferdianar&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
 
 ### Find and discover me around the web 🌎:
  - Contribute create some components in <a href="https://tailwindcomponents.com/u/ferdian-ahmad-r" target="_blank" alt="tailwind"> **Tailwind Components** </a>
