@@ -1,8 +1,10 @@
-<img src="https://raw.githubusercontent.com/ferdianar/ferdianarid/master/public/images/banner.jpg?token=GHSAT0AAAAAAB3C6QZ37KIM2NQKSPOYROJCY3O5BHQ" alt="banner" />
+<!-- <img src="https://raw.githubusercontent.com/ferdianar/ferdianarid/master/public/images/banner.jpg?token=GHSAT0AAAAAAB3C6QZ37KIM2NQKSPOYROJCY3O5BHQ" alt="banner" /> -->
 <!-- :sparkles: Mostly using React, Tailwind CSS, Redux, Formik, Strapi, Axios, GraphQL, Eslint :sparkles: -->
 <!-- :sparkles: Prefer and Interest with **Microservices** Architecture :sparkles: -->
 
-### Hi, I'm Ferdian Ahmad R 👋 !
+### Hi, I'm Ferdian 👋
+👔 I'm currently work as Frontend Developer at Dipa Inhouse
+♻️ Currently learning State Management
 <!-- [](https://komarev.com/ghpvc/?username=ferdianarid) -->
 
 <!-- [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Sans&color=%23F6F703&size=18&duration=7500&lines=Let's+Explore+My+Github+Portfolio+%F0%9F%91%8B;I'm+mostly+using+JavaScript+Language+%F0%9F%8C%9F;Focused+in+Frontend+Development+%F0%9F%8E%AD;Also+Learn+Backend+Development+with+JS+%F0%9F%92%BB;Interest+about+Design+System+Component+%F0%9F%A7%A9;Always+using+Task+Management+%F0%9F%93%86;Thank+You+......+!!!+%F0%9F%91%8F%F0%9F%91%8F)](https://git.io/typing-svg) -->
@@ -18,12 +20,12 @@
 
 <!-- <a href="#"><img src="https://api.daily.dev/devcards/664069b76eac4c99ae4bcc41edc056b4.png?r=mm1" width="300" alt="Ferdian Ahmad R's Dev Card"/></a> -->
 
-<p align="left">
+<!-- <p align="left">
 <a href="https://github.com/ferdianarid">
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=ferdianarid&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=ferdianarid&layout=compact&langs_count=10&theme=algolia"/>
 </a>
-</p>
+</p> -->
 
 <!-- [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=ferdianar&theme=navy-gear&date_format=M%20j%5B%2C%20Y%5D&fire=DDCF00&background=00031B&border=D5DD00&stroke=CDDD00&ring=5A59DD&currStreakNum=D8DD00&sideNums=D9EA2D&currStreakLabel=DD2727&sideLabels=7B6DDD&dates=DDDC1D)](https://git.io/streak-stats) -->
 
@@ -100,13 +102,13 @@
 <!--   </tr>
 </table> -->
 
-## Work / Skills
-[![My Skills](https://skillicons.dev/icons?i=nextjs,react,ts,javascript,tailwind,mongodb,nodejs,firebase,markdown,styledcomponents,github,vercel,figma,git,vscode,xd&perline=8&theme=dark)](https://skillicons.dev)
+<!-- ## Work / Skills
+[![My Skills](https://skillicons.dev/icons?i=nextjs,react,ts,javascript,tailwind,mongodb,nodejs,firebase,markdown,styledcomponents,github,vercel,figma,git,vscode,xd&perline=8&theme=dark)](https://skillicons.dev) -->
 
-### Achievement
-[![@ferdianarid's Holopin board](https://holopin.me/ferdianarid)](https://holopin.io/@ferdianarid)
+<!-- ### Achievement
+[![@ferdianarid's Holopin board](https://holopin.me/ferdianarid)](https://holopin.io/@ferdianarid) -->
 
-<a href="https://github.com/ferdianarid/github-readme-activity-graph"><img alt="Ferdian's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=ferdianar&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+<!-- <a href="https://github.com/ferdianarid/github-readme-activity-graph"><img alt="Ferdian's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=ferdianar&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
 
 ### Find and discover me around the web 🌎:
  - Contribute create some components in <a href="https://tailwindcomponents.com/u/ferdian-ahmad-r" target="_blank" alt="tailwind"> **Tailwind Components** </a>
@@ -116,5 +118,5 @@
  - Spare time also create posts about programming on <a href="https://www.instagram.com/ferdianarid/" target="_blank" alt="instagram"> **Instagram** </a>
  - Discover me on the Dev.to for latest posts <a href="https://dev.to/ferdianar" alt="devto">**Dev.to Profile**</a>
  - See my profile and progress in Google Developer Profile and badge <a href="https://g.dev/ferdianarid" alt="googledeveloper">**Google Developer Profile**</a>
- - Make a Design Exploration and publish it in <a href="https://dribbble.com/ferdianar" alt="dribbble" target="_blank"> **Dribbble**</a>
+ - Make a Design Exploration and publish it in <a href="https://dribbble.com/ferdianar" alt="dribbble" target="_blank"> **Dribbble**</a> -->
  <!--  - Learn problem solving skill for solving any problem in <a href="https://www.hackerrank.com/ferdianarid"> Hackerrank </a> -->
